@@ -292,4 +292,10 @@ if (menuBtn && primaryNav) {
       closeMenu();
     });
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860) {
+      closeMenu();
+    }
+  });
 }

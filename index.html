@@ -3,330 +3,373 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- TITLE (tämä näkyy Googlessa sinisenä otsikkona) -->
   <title>Juho Ranta-Maunus Website</title>
-
-  <!-- META DESCRIPTION (Googlen tekstikuvaus) -->
   <meta
     name="description"
-    content="Juho Ranta-Maunus Website featuring biography, lineup, music, shows and contact information."
+    content="Juho Ranta-Maunus Website featuring biography, videos, music, press, shows and contact information."
   />
-
-  <!-- KEYWORDS (ei kriittinen, mutta ok mukana) -->
   <meta
     name="keywords"
     content="Juho Ranta-Maunus Website, Juho Ranta-Maunus, guitarist, music, official website"
   />
-
-  <!-- Open Graph (someen & Googleen) -->
   <meta property="og:title" content="Juho Ranta-Maunus Website" />
-  <meta
-    property="og:description"
-    content="Juho Ranta-Maunus Website."
-  />
+  <meta property="og:description" content="Juho Ranta-Maunus Website." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://codeeternalband.com/" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/icons/Fawicon.png" />
-
-  <!-- Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css?v=28" />
+  <link rel="stylesheet" href="style.css?v=29" />
 </head>
 
 <body>
-
-  <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="#top" class="logo-link">
-      <img src="assets/images/logo-white.png" alt="Juho Ranta-Maunus Website logo" class="logo" width="200" height="60" />
+    <a href="#home" class="logo-link" aria-label="Go to home">
+      <img src="assets/images/Logo JRM.png" alt="Juho Ranta-Maunus Website logo" class="logo" width="200" height="60" />
     </a>
 
     <div class="nav-right">
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Avaa valikko">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
         <span>Menu</span>
       </button>
 
       <div class="nav-links" id="primaryNav">
-        <a href="#biography">Biography</a>
-        <a href="#latest-release">Videos</a>
-        <a href="#music">Music</a>
-        <a href="#press">Press</a>
-        <a href="#shows">Shows</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-view-link="home">Home</a>
+        <a href="#biography" data-view-link="biography">Bio</a>
+        <a href="#videos" data-view-link="videos">Videos</a>
+        <a href="#music" data-view-link="music">Music</a>
+        <a href="#press" data-view-link="press">Press</a>
+        <a href="#shows" data-view-link="shows">Shows</a>
+        <a href="#contact" data-view-link="contact">Contact</a>
       </div>
 
       <div class="nav-socials">
-        <a href="https://www.facebook.com/Codeeternal/" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="assets/icons/icon-facebook.svg" alt="Facebook" width="38" height="38" loading="lazy" decoding="async" />
-        </a>
-        <a href="https://www.instagram.com/code_eternal/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="assets/icons/icon-instagram.svg" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" />
-        </a>
-        <a href="https://www.youtube.com/channel/UC-vPF50rdRidDn1fiP3GvuA" target="_blank" rel="noopener" aria-label="YouTube">
+        <a href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener" aria-label="YouTube">
           <img src="assets/icons/icon-youtube.svg" alt="YouTube" width="38" height="38" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://www.instagram.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img class="social-instagram" src="assets/icons/icon-instagram.svg" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://www.facebook.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="assets/icons/icon-facebook.svg" alt="Facebook" width="38" height="38" loading="lazy" decoding="async" />
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero" id="top">
-    <h1 class="sr-only">Juho Ranta-Maunus Website</h1>
-    <div class="hero-media">
-      <span class="hero-credit">Photo: Toni Huhta</span>
-    </div>
-  </div>
-
-  <!-- BIOGRAPHY -->
-  <section id="biography">
-    <h2>Biography</h2>
-
-    <p>Juho "JRM" Ranta-Maunus is a Finnish guitarist known for precision playing, progressive phrasing and a strong modern metal sound.</p>
-
-    <p>At just 14 years old, Juho won Guitar World Magazine’s <em>“Young Guitarist of the Year”</em> in 2020. Since then, he has continued building his identity as a player, writer and creative force with a style that combines technical control, melody and intensity.</p>
-
-    <p>This site highlights Juho’s work, music and current releases.</p>
-  </section>
-
-  <!-- LATEST RELEASE -->
-  <section id="latest-release" class="feature-section">
-    <h2>Videos</h2>
-    <div class="release-embed">
-      <article class="feature-card video-card">
-        <iframe
-          src="https://www.youtube.com/embed/zaQy98UgrTU"
-          title="Juho Ranta-Maunus Website - Brace Yourself"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </article>
-
-      <article class="feature-card video-card">
-        <iframe
-          src="https://www.youtube.com/embed/s5jS_5bygdA"
-          title="Juho Ranta-Maunus Website - Music Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </article>
-    </div>
-  </section>
-
-  <!-- MUSIC -->
-  <section id="music">
-    <h2>Music</h2>
-    <div class="music-frame">
-      <iframe
-        src="https://open.spotify.com/embed/artist/1d55VFNm8Qci0DEQoEW0xy"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        class="music-embed"
-        title="Spotify Player">
-      </iframe>
-    </div>
-  </section>
-
-  <section id="press" class="feature-section">
-    <h2>Press</h2>
-    <div class="press-grid">
-      <div class="press-card">
-        <p class="press-quote">
-          „Brace Yourself“ behandelt folgendes Thema: den Aufstieg der künstlichen
-          Intelligenz als sich selbst verteidigende Einheit, die die Menschheit zwingt, sich
-          mit den Folgen ihrer eigenen Schöpfung auseinanderzusetzen.&nbsp;<a
-            href="https://vampster.com/news/code-eternal-neue-progressive-metal-single-brace-yourself-mitsamt-video-clip/"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Vampster article in a new tab"></a>
-        </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Vampster, DEU</span>
+  <main class="site-main">
+    <section class="page-view page-home is-active" data-view="home">
+      <div class="hero">
+        <h1 class="sr-only">Juho Ranta-Maunus Website</h1>
+        <div class="hero-media">
+          <div class="hero-overlay-copy">
+            <p class="hero-kicker">Juho Ranta-Maunus</p>
+            <h2 class="hero-title">Modern guitar work, releases, videos and updates in one place.</h2>
+            <div class="hero-actions">
+              <a class="feature-link" href="#music">Listen</a>
+              <a class="feature-link feature-link-secondary" href="#videos">Watch</a>
+            </div>
           </div>
-          <p class="press-date">November 7, 2025</p>
+          <span class="hero-credit">Photo: Toni Huhta</span>
         </div>
       </div>
 
-      <div class="press-card">
-        <p class="press-quote">
-          "Brace Yourself" - Kappale jatkaa bändin kunnianhimoista ja virtuoottista linjaa, jossa yhdistyvät tekninen taituruus, voimakkaat melodiat ja dramaattiset sävyt&nbsp;<a
-            href="https://metalliluola.fi/progressiivinen-metallilupaus-code-eternal-julkaisi-ensimmaisen-singlen-brace-yourself-tulevalta-albumilta/"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Metalliluola article in a new tab"></a>
+      <section class="home-intro">
+        <p class="home-lead">
+          This site is structured like separate pages under one link. Open any section from the navigation or from the cards below.
         </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Metalliluola, FIN</span>
-          </div>
-          <p class="press-date">October 19, 2025</p>
-        </div>
+      </section>
+
+      <section class="home-grid" aria-label="Site sections">
+        <a class="home-card" href="#biography">
+          <span class="home-card-kicker">Profile</span>
+          <h2>Bio</h2>
+          <p>Background, recognition and the core story behind JRM.</p>
+        </a>
+
+        <a class="home-card" href="#videos">
+          <span class="home-card-kicker">Visuals</span>
+          <h2>Videos</h2>
+          <p>Official video material collected into its own view.</p>
+        </a>
+
+        <a class="home-card" href="#music">
+          <span class="home-card-kicker">Streaming</span>
+          <h2>Music</h2>
+          <p>Spotify artist embed with the latest tracks and releases.</p>
+        </a>
+
+        <a class="home-card" href="#press">
+          <span class="home-card-kicker">Coverage</span>
+          <h2>Press</h2>
+          <p>Selected media quotes and article links in one place.</p>
+        </a>
+
+        <a class="home-card" href="#shows">
+          <span class="home-card-kicker">Live</span>
+          <h2>Shows</h2>
+          <p>Past and upcoming shows presented as their own page.</p>
+        </a>
+
+        <a class="home-card" href="#contact">
+          <span class="home-card-kicker">Direct</span>
+          <h2>Contact</h2>
+          <p>Bookings, interviews and direct contact information.</p>
+        </a>
+      </section>
+    </section>
+
+    <section class="page-view" data-view="biography">
+      <div class="page-hero page-hero-compact">
+        <h1>Bio</h1>
       </div>
 
-      <div class="press-card">
-        <p class="press-quote">
-          "Brace Yourself" - Kappale yhdistää virtuoottista soittoa, vahvoja melodioita ja dramaattisia sävyjä - vaikutteita voi kuulla muun muassa Dream Theaterin ja Symphony X:n suunnalta&nbsp;<a
-            href="https://kaaoszine.fi/progressiivinen-metallilupaus-code-eternal-julkaisi-ensimmaisen-singlen-brace-yourself-tulevalta-albumilta/"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Kaaoszine article in a new tab"></a>
-        </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Kaaoszine, FIN</span>
-          </div>
-          <p class="press-date">October 13, 2025</p>
-        </div>
+      <section id="biography">
+        <p>Juho "JRM" Ranta-Maunus is a Finnish guitarist known for precision playing, progressive phrasing and a strong modern metal sound.</p>
+        <p>At just 14 years old, Juho won Guitar World Magazine’s <em>“Young Guitarist of the Year”</em> in 2020. Since then, he has continued building his identity as a player, writer and creative force with a style that combines technical control, melody and intensity.</p>
+        <p>This site highlights Juho’s work, music and current releases.</p>
+      </section>
+    </section>
+
+    <section class="page-view" data-view="videos">
+      <div class="page-hero page-hero-compact">
+        <h1>Videos</h1>
       </div>
 
-      <div class="press-card">
-        <p class="press-quote">
-          Drawing influence from Dream Theater, Symphony X, and Jelusick, Code Eternal’s sound merges jaw-dropping technicality with the passion and swagger of modern metal.&nbsp;<a
-            href="https://metaldevastationradio.com/thebeast/blog/28156/code-eternal-unleash-new-single-brace-yourself-out-october-10-2025"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Metal Devastation Radio article in a new tab"></a>
-        </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Metal Devastation Radio, USA</span>
-          </div>
-          <p class="press-date">October 10, 2025</p>
+      <section id="latest-release" class="feature-section">
+        <div class="release-embed">
+          <article class="feature-card video-card">
+            <button
+              type="button"
+              class="video-launch"
+              data-video-id="n0khkeWIdFY"
+              aria-label="Play Juho Ranta-Maunus video">
+            </button>
+          </article>
+
+          <article class="feature-card video-card">
+            <button
+              type="button"
+              class="video-launch"
+              data-video-id="J2ENARBpOxs"
+              aria-label="Play Juho Ranta-Maunus video">
+            </button>
+          </article>
+
+          <article class="feature-card video-card">
+            <button
+              type="button"
+              class="video-launch"
+              data-video-id="5T9WabbhVxU"
+              aria-label="Play Juho Ranta-Maunus video">
+            </button>
+          </article>
+
+          <article class="feature-card video-card">
+            <button
+              type="button"
+              class="video-launch"
+              data-video-id="53GDvHtgIms"
+              aria-label="Play Juho Ranta-Maunus video">
+            </button>
+          </article>
+
+          <article class="feature-card video-card">
+            <button
+              type="button"
+              class="video-launch"
+              data-video-id="J1r45Sk8siU"
+              aria-label="Play Juho Ranta-Maunus video">
+            </button>
+          </article>
+
+          <article class="feature-card video-card">
+            <button
+              type="button"
+              class="video-launch"
+              data-video-id="m8sOLzpLIQo"
+              aria-label="Play Juho Ranta-Maunus video">
+            </button>
+          </article>
+
         </div>
+      </section>
+    </section>
+
+    <section class="page-view" data-view="music">
+      <div class="page-hero page-hero-compact">
+        <h1>Music</h1>
       </div>
-    </div>
-  </section>
 
-  <!-- SHOWS -->
-  <section id="shows" class="feature-section">
-    <h2>Shows</h2>
-
-    <div class="shows-grid">
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Bar 15 Basement</span>
-          </div>
-          <p class="show-date">March 14, 2026</p>
-          <p class="show-city">Seinäjoki, FIN</p>
+      <section id="music">
+        <div class="music-frame">
+          <iframe
+            src="https://open.spotify.com/embed/artist/1d55VFNm8Qci0DEQoEW0xy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            class="music-embed"
+            title="Spotify Player">
+          </iframe>
         </div>
-      </article>
 
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Hugo Hall</span>
-          </div>
-          <p class="show-date">February 18, 2026</p>
-          <p class="show-city">Seinäjoki, FIN</p>
+        <div class="music-copy">
+          <section class="music-block">
+            <h2>Band Releases (Spotify)</h2>
+            <p class="music-role">Code Eternal (2021-) founder, lead guitarist, composer, arranger</p>
+            <div class="music-release-list">
+              <p><strong>Code Eternal - Sixth Wave</strong> (EP, 2023)</p>
+              <ul class="music-track-list">
+                <li>The Wave</li>
+                <li>Regeneration</li>
+                <li>Race Through Time</li>
+              </ul>
+              <p><strong>Code Eternal</strong> (singles, 2025-2026)</p>
+              <ul class="music-track-list">
+                <li>Brace Yourself</li>
+                <li>Voices Call</li>
+              </ul>
+              <p><strong>Averse - Twisted Mind</strong> (EP, 2025)</p>
+              <ul class="music-track-list">
+                <li>Twisted Mind</li>
+                <li>Sinkin'</li>
+                <li>Redness</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="music-block">
+            <h2>Solo Releases (Spotify)</h2>
+            <div class="music-release-list">
+              <p><strong>The Drift</strong> (single, 2023)</p>
+              <p><strong>Stormchaser</strong> (EP, 2023)</p>
+              <ul class="music-track-list">
+                <li>Stormchaser</li>
+                <li>Shades of Dawn</li>
+                <li>Cliffhanger</li>
+              </ul>
+              <p><strong>Warp Drive</strong> (single, 2021)</p>
+              <p><strong>Diversity</strong> (single, 2020)</p>
+            </div>
+          </section>
         </div>
-      </article>
+      </section>
+    </section>
 
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Lentilärock</span>
+    <section class="page-view" data-view="press">
+      <div class="page-hero page-hero-compact">
+        <h1>Press</h1>
+      </div>
+
+      <section id="press" class="feature-section">
+        <div class="press-grid">
+          <div class="press-card">
+            <p class="press-quote">
+              „Brace Yourself“ behandelt folgendes Thema: den Aufstieg der künstlichen
+              Intelligenz als sich selbst verteidigende Einheit, die die Menschheit zwingt, sich
+              mit den Folgen ihrer eigenen Schöpfung auseinanderzusetzen.&nbsp;<a
+                href="https://vampster.com/news/code-eternal-neue-progressive-metal-single-brace-yourself-mitsamt-video-clip/"
+                target="_blank"
+                rel="noopener"
+                class="press-quote-link"
+                aria-label="Open Vampster article in a new tab"></a>
+            </p>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Vampster, DEU</span>
+              </div>
+              <p class="press-date">November 7, 2025</p>
+            </div>
           </div>
-          <p class="show-date">August 2, 2025</p>
-          <p class="show-city">Kuortane, FIN</p>
-        </div>
-      </article>
 
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Rytmikorjaamo</span>
+          <div class="press-card">
+            <p class="press-quote">
+              "Brace Yourself" - Kappale jatkaa bändin kunnianhimoista ja virtuoottista linjaa, jossa yhdistyvät tekninen taituruus, voimakkaat melodiat ja dramaattiset sävyt&nbsp;<a
+                href="https://metalliluola.fi/progressiivinen-metallilupaus-code-eternal-julkaisi-ensimmaisen-singlen-brace-yourself-tulevalta-albumilta/"
+                target="_blank"
+                rel="noopener"
+                class="press-quote-link"
+                aria-label="Open Metalliluola article in a new tab"></a>
+            </p>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Metalliluola, FIN</span>
+              </div>
+              <p class="press-date">October 19, 2025</p>
+            </div>
           </div>
-          <p class="show-date">October 30, 2021</p>
-          <p class="show-city">Seinäjoki, FIN</p>
+
+          <div class="press-card">
+            <p class="press-quote">
+              "Brace Yourself" - Kappale yhdistää virtuoottista soittoa, vahvoja melodioita ja dramaattisia sävyjä - vaikutteita voi kuulla muun muassa Dream Theaterin ja Symphony X:n suunnalta&nbsp;<a
+                href="https://kaaoszine.fi/progressiivinen-metallilupaus-code-eternal-julkaisi-ensimmaisen-singlen-brace-yourself-tulevalta-albumilta/"
+                target="_blank"
+                rel="noopener"
+                class="press-quote-link"
+                aria-label="Open Kaaoszine article in a new tab"></a>
+            </p>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Kaaoszine, FIN</span>
+              </div>
+              <p class="press-date">October 13, 2025</p>
+            </div>
+          </div>
+
+          <div class="press-card">
+            <p class="press-quote">
+              Drawing influence from Dream Theater, Symphony X, and Jelusick, Code Eternal’s sound merges jaw-dropping technicality with the passion and swagger of modern metal.&nbsp;<a
+                href="https://metaldevastationradio.com/thebeast/blog/28156/code-eternal-unleash-new-single-brace-yourself-out-october-10-2025"
+                target="_blank"
+                rel="noopener"
+                class="press-quote-link"
+                aria-label="Open Metal Devastation Radio article in a new tab"></a>
+            </p>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Metal Devastation Radio, USA</span>
+              </div>
+              <p class="press-date">October 10, 2025</p>
+            </div>
+          </div>
         </div>
-      </article>
-    </div>
-  </section>
+      </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-panel">
-      <p>
-        For live bookings, interviews, media inquiries, and other requests, contact:
-      </p>
-      <p class="contact-email-row">
-        <span class="contact-link" id="ce-mail"></span>
-      </p>
-    </div>
-  </section>
+    <section class="page-view" data-view="shows">
+      <div class="page-hero page-hero-compact">
+        <h1>Shows</h1>
+      </div>
 
-<footer>
-  <p>&copy; <span id="year"></span> Juho Ranta-Maunus Website. All rights reserved.</p>
-</footer>
+      <section id="shows" class="feature-section">
+        <div id="showsList"></div>
+        <p class="booking-note" id="showsStatus">Loading shows...</p>
+        <noscript>
+          <p class="booking-note">Enable JavaScript to load shows from the text file.</p>
+        </noscript>
+      </section>
+    </section>
 
-  <!-- MENU SCRIPT -->
-  <script>
-    // Estetaan mobiiliselaimia palauttamasta satunnaista scroll-positiota tavallisella sivulatauksella.
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
+    <section class="page-view" data-view="contact">
+      <div class="page-hero page-hero-compact">
+        <h1>Contact</h1>
+      </div>
 
-    const navigationEntry = performance.getEntriesByType('navigation')[0];
-    const navigationType = navigationEntry ? navigationEntry.type : '';
+      <section id="contact">
+        <div class="contact-panel">
+          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
+          <p class="contact-email-row">
+            <span class="contact-link" id="ce-mail"></span>
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
 
-    if (!window.location.hash && navigationType !== 'back_forward') {
-      const resetScroll = () => window.scrollTo(0, 0);
-      resetScroll();
-      window.addEventListener('load', () => {
-        requestAnimationFrame(resetScroll);
-      }, { once: true });
-    }
+  <footer>
+    <p>&copy; <span id="year"></span> Juho Ranta-Maunus Website. All rights reserved.</p>
+  </footer>
 
-    // Automaattinen vuosiluku
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Sähköpostiosoite muodostetaan selaimessa ilman selväkielistä osoitetta HTML:ssä tai JS-stringinä
-    const ceMail = document.getElementById('ce-mail');
-    if (ceMail) {
-      const makeText = (codes) => codes.map((code) => String.fromCharCode(code)).join('');
-      const user = makeText([106, 114, 109, 103, 117, 105, 116, 97, 114, 111, 102, 102, 105, 99, 105, 97, 108]);
-      const domain = makeText([103, 109, 97, 105, 108, 46, 99, 111, 109]);
-
-      ceMail.textContent = `${user}@${domain}`;
-    }
-
-    // Mobiilivalikko
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('primaryNav');
-
-    if (btn && nav) {
-      btn.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(isOpen));
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
-
-      nav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          if (nav.classList.contains('open')) {
-            nav.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-          }
-        });
-      });
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>

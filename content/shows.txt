@@ -1,0 +1,47 @@
+# Use section headers in brackets.
+# Venue | Month Day, Year | City, CountryCode
+
+[Solo Shows]
+Elämäni Biisi | January 3, 2025 | Tampere, FIN
+Metsäkylän nuorisoseura | November 9, 2024 | Kurikka, FIN
+Berklee College of Music - Red Room | July 17, 2024 | Boston, USA
+Raskas EI kiusaamiselle / Rock Camp ry., Rytmikorjaamo | January 6, 2024 | Seinajoki, FIN
+TeuvaFest | June 10, 2023 | Teuva, FIN
+Eduskuntavaalistartti, Tennispalatsi | January 27, 2023 | Helsinki, FIN
+Seminaari "Svenskaa ja finskaa Seinäjoella", Frami | October 31, 2022 | Seinajoki, FIN
+Guitar World Studio | October 17, 2022 | Bath, UK
+Yksityistilaisuus, Kartanohotelli Karolineburg | June 14, 2022 | Kajaani, FIN
+Kevätkabaree, Ylistaron yläkoulu | May 30, 2022 | Ylistaro, FIN
+Seinäjoen Sininen Wappu, Epstori | May 1, 2022 | Seinajoki, FIN
+Yksityistilaisuus, Konst O. Deli | March 26, 2022 | Vaasa, FIN
+Yksityistilaisuus, Carlsberg Sports Bar | November 26, 2021 | Seinajoki, FIN
+Etelä-Pohjanmaan musiikkiopiston konsertti, Seinäjoki-sali | November 12, 2021 | Seinajoki, FIN
+Yksityistilaisuus, The Club Billiard | November 10, 2021 | Vaasa, FIN
+Etelä-Pohjanmaan maakuntajuhla, Hugo-sali | November 4, 2021 | Seinajoki, FIN
+Rock Camp, Rytmikorjaamo | October 30, 2021 | Seinajoki, FIN
+Yksityistilaisuus, Kalevan Navetta | October 29, 2021 | Seinajoki, FIN
+Yksityistilaisuus, Botta | October 20, 2021 | Helsinki, FIN
+Rock Camp Live, Keskustori | August 21, 2021 | Seinajoki, FIN
+Yksityistilaisuus | August 21, 2021 | Seinajoki, FIN
+Leijonat torilla, Keskustori | August 14, 2021 | Seinajoki, FIN
+Kuninkuusravit, Finlandia-hymni, Ravikeskus | August 1, 2021 | Seinajoki, FIN
+Kauhava Motor Show, LSK Business Park | July 24-25, 2021 | Kauhava, FIN
+Etelä-Pohjanmaan musiikkiopiston konsertti, Seinäjoki-sali | May 24, 2021 | Seinajoki, FIN
+Aid Live -hyväntekeväisyystapahtuma, Rytmikorjaamo | December 20, 2020 | Seinajoki, FIN
+
+[Band Shows]
+Raskasta Joulua | December 6, 2025 | Seinajoki, FIN
+Lentilärock (Code Eternal) | October 2, 2025 | Kuortane, FIN
+Wanha Mestari (Averse) | September 5, 2025 | Kauhajoki, FIN
+Käntynmäki Rock (Averse) | May 31, 2025 | Karvia, FIN
+YaRockSM (Averse) | March 29, 2025 | Kauhajoki, FIN
+Red Room, Berklee College of Music (The Buzz) | July 26, 2024 | Boston, USA
+David Friend Recital Hall, Berklee College of Music (Nightmare Cinema) | July 26, 2024 | Boston, USA
+Pori Jazz Festival (Popjazzleirin band) | 2021, 2022, 2023 | Pori, FIN
+Rock Camp plays Megadeth, Rytmikorjaamo (Rock Campin bändi) | May 27, 2023 | Seinajoki, FIN
+Talvipirskeet (Code Eternal) | February 18, 2023 | Parkano, FIN
+Alavuden yläkoulu (Code Eternal) | May 31, 2022 | Alavus, FIN
+Lastenkulttuurin Kevätpäivät, Hugo-sali (Code Eternal) | April 19, 2022 | Seinajoki, FIN
+Club MELU -livemusiikkitapahtuma, Hugo-Sali (Code Eternal) | November 18, 2021 | Seinajoki, FIN
+Etelä-Pohjanmaan musiikkiopiston lukukauden päätöskonsertti, Seinäjoki-sali (Code Eternal) | December 17, 2021 | Seinajoki, FIN
+Rock Camp, Rytmikorjaamo (Code Eternal) | October 30, 2021 | Seinajoki, FIN

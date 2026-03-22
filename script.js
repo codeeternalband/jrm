@@ -54,6 +54,39 @@ window.addEventListener('load', () => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const createVideoButton = (videoId) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'video-launch';
+  button.dataset.videoId = videoId;
+  button.setAttribute('aria-label', 'Play Juho Ranta-Maunus video');
+  button.style.backgroundImage = `url("https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg")`;
+
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.video-card iframe').forEach((activeFrame) => {
+      const activeVideoId = activeFrame.dataset.videoId;
+
+      if (!activeVideoId) {
+        return;
+      }
+
+      activeFrame.replaceWith(createVideoButton(activeVideoId));
+    });
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    iframe.title = 'Juho Ranta-Maunus video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    iframe.loading = 'lazy';
+    iframe.dataset.videoId = videoId;
+
+    button.replaceWith(iframe);
+  });
+
+  return button;
+};
+
 document.querySelectorAll('.video-launch').forEach((button) => {
   const videoId = button.dataset.videoId;
 
@@ -61,40 +94,20 @@ document.querySelectorAll('.video-launch').forEach((button) => {
     return;
   }
 
-  button.style.backgroundImage = `url("https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg")`;
-
-  button.addEventListener('click', () => {
-    const appUrl = `youtube://watch?v=${videoId}`;
-    const webUrl = `https://youtu.be/${videoId}`;
-    const fallbackTimer = window.setTimeout(() => {
-      window.location.href = webUrl;
-    }, 700);
-
-    const clearFallback = () => {
-      window.clearTimeout(fallbackTimer);
-      window.removeEventListener('pagehide', clearFallback);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        clearFallback();
-      }
-    };
-
-    window.addEventListener('pagehide', clearFallback, { once: true });
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    window.location.href = appUrl;
-  });
+  const hydratedButton = createVideoButton(videoId);
+  button.replaceWith(hydratedButton);
 });
 
-const ceMail = document.getElementById('ce-mail');
-if (ceMail) {
+const ceMailNodes = document.querySelectorAll('.js-contact-email');
+if (ceMailNodes.length) {
   const makeText = (codes) => codes.map((code) => String.fromCharCode(code)).join('');
   const user = makeText([106, 114, 109, 103, 117, 105, 116, 97, 114, 111, 102, 102, 105, 99, 105, 97, 108]);
   const domain = makeText([103, 109, 97, 105, 108, 46, 99, 111, 109]);
+  const email = `${user}@${domain}`;
 
-  ceMail.textContent = `${user}@${domain}`;
+  ceMailNodes.forEach((node) => {
+    node.textContent = email;
+  });
 }
 
 const showsList = document.getElementById('showsList');

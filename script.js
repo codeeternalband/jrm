@@ -54,12 +54,13 @@ window.addEventListener('load', () => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const createVideoButton = (videoId) => {
+const createVideoButton = (videoId, videoTitle = 'Juho Ranta-Maunus video') => {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'video-launch';
   button.dataset.videoId = videoId;
-  button.setAttribute('aria-label', 'Play Juho Ranta-Maunus video');
+  button.dataset.videoTitle = videoTitle;
+  button.setAttribute('aria-label', `Play ${videoTitle}`);
   button.style.backgroundImage = `url("https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg")`;
 
   button.addEventListener('click', () => {
@@ -70,16 +71,17 @@ const createVideoButton = (videoId) => {
         return;
       }
 
-      activeFrame.replaceWith(createVideoButton(activeVideoId));
+      activeFrame.replaceWith(createVideoButton(activeVideoId, activeFrame.dataset.videoTitle));
     });
 
     const iframe = document.createElement('iframe');
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    iframe.title = 'Juho Ranta-Maunus video';
+    iframe.title = videoTitle;
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
     iframe.loading = 'lazy';
     iframe.dataset.videoId = videoId;
+    iframe.dataset.videoTitle = videoTitle;
 
     button.replaceWith(iframe);
   });
@@ -89,14 +91,57 @@ const createVideoButton = (videoId) => {
 
 document.querySelectorAll('.video-launch').forEach((button) => {
   const videoId = button.dataset.videoId;
+  const videoTitle = button.dataset.videoTitle || 'Juho Ranta-Maunus video';
 
   if (!videoId) {
     return;
   }
 
-  const hydratedButton = createVideoButton(videoId);
+  const hydratedButton = createVideoButton(videoId, videoTitle);
   button.replaceWith(hydratedButton);
 });
+
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  heroVideo.addEventListener('loadeddata', () => {
+    const playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {});
+    }
+  });
+}
+
+const revealNodes = Array.from(document.querySelectorAll('.js-scroll-reveal'));
+
+revealNodes.forEach((node) => {
+  const delay = Number(node.dataset.revealDelay || 0);
+  node.style.setProperty('--reveal-delay', `${delay}ms`);
+});
+
+if (revealNodes.length) {
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, {
+      threshold: 0.16,
+      rootMargin: '0px 0px -8% 0px',
+    });
+
+    revealNodes.forEach((node) => {
+      revealObserver.observe(node);
+    });
+  } else {
+    revealNodes.forEach((node) => {
+      node.classList.add('is-visible');
+    });
+  }
+}
 
 const ceMailNodes = document.querySelectorAll('.js-contact-email');
 if (ceMailNodes.length) {

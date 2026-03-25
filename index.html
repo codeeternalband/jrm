@@ -47,13 +47,16 @@
 
       <div class="nav-socials">
         <a href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener" aria-label="YouTube">
-          <img src="assets/icons/icon-youtube.svg" alt="YouTube" width="38" height="38" loading="lazy" decoding="async" />
+          <img class="social-youtube" src="assets/images/Nettisivu/Youtube.png" alt="YouTube" width="38" height="38" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank" rel="noopener" aria-label="Spotify">
+          <img src="assets/images/Nettisivu/Spotify.png" alt="Spotify" width="38" height="38" loading="lazy" decoding="async" />
         </a>
         <a href="https://www.instagram.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img class="social-instagram" src="assets/icons/icon-instagram.svg" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" />
+          <img class="social-instagram" src="assets/images/Nettisivu/Instagram.webp" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" />
         </a>
         <a href="https://www.facebook.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="assets/icons/icon-facebook.svg" alt="Facebook" width="38" height="38" loading="lazy" decoding="async" />
+          <img src="assets/images/Nettisivu/Facebook.webp" alt="Facebook" width="38" height="38" loading="lazy" decoding="async" />
         </a>
       </div>
     </div>
@@ -64,6 +67,16 @@
       <div class="hero">
         <h1 class="sr-only">Juho Ranta-Maunus Website</h1>
         <div class="hero-media">
+          <video
+            class="hero-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            aria-hidden="true">
+            <source src="assets/videos/raskasta-joulua-solo-hero.webm" type="video/webm" />
+          </video>
           <div class="hero-overlay-copy">
             <p class="hero-kicker">Juho Ranta-Maunus</p>
             <h2 class="hero-title">Juho's guitar <span class="hero-nowrap">work, releases</span> and updates <span class="hero-nowrap">all in one place.</span></h2>
@@ -72,13 +85,12 @@
               <a class="feature-link" href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank" rel="noopener">Listen</a>
             </div>
           </div>
-          <span class="hero-credit">Photo: Toni Huhta</span>
+          <span class="hero-credit">Video: Performing as a Special Guest with Raskasta Joulua</span>
         </div>
       </div>
 
       <section class="home-featured-release" aria-label="Latest Code Eternal releases">
         <div class="home-featured-copy">
-          <p class="home-featured-kicker">Latest From Code Eternal</p>
           <h2>New singles from Code Eternal</h2>
         </div>
 
@@ -124,14 +136,12 @@
     </section>
 
     <section class="page-view" data-view="biography">
-      <div class="page-hero page-hero-compact">
-        <h1>Bio</h1>
-      </div>
-
       <section id="biography">
-        <p>Juho Ranta-Maunus (born June 29, 2006) is a guitarist from Finland. His playing was recognized internationally after winning Guitar World magazine’s <em>Young Guitarist of the Year</em> in 2020, and he has continued to build his path through solo releases, band work, live performances and music production.</p>
-        <p>He is the founder of the Finnish progressive metal band Code Eternal, where he works as lead guitarist, composer and arranger, and he has also worked with the band Averse. Alongside his own solo material, his work has included original releases, performances in Finland and abroad, and a growing presence on YouTube and social media.</p>
-        <p>Juho has studied guitar and music theory for more than a decade, alongside piano, band playing and performance studies. His development has also included programs at Berklee College of Music and Musicians Institute. He has artist endorsements with Ibanez, Neural DSP and Levytukku, and has received several scholarships and recognitions along the way.</p>
+        <p>Juho Ranta-Maunus (born June 29, 2006) is a guitarist from Finland.</p>
+        <p>Juho has studied guitar and music theory for more than a decade, alongside piano, ensemble work and performance studies. He has also taken part in summer programs at Berklee College of Music and Musicians Institute. He holds artist endorsements with Ibanez, Neural DSP and Levytukku. Among his most notable appearances are performances as a special guest with Finland's largest live production, Raskasta Joulua, and on the Elämäni Biisi (Song Of My Life) TV show in 2026.</p>
+        <p>He is the founder of the Finnish progressive metal band Code Eternal, where he works as lead guitarist, composer and arranger. He has also worked with melodic metalcore band Averse.</p>
+        <p>His playing was recognized internationally after winning Guitar World magazine’s <em>Young Guitarist of the Year</em> in 2020, and he has continued to build his path through solo releases, band work and live performances.</p>
+        <p>He will begin his studies in the performance program at Metropolia University of Applied Sciences in the fall of 2026. He is currently working on Code Eternal's debut album as well as new solo material.</p>
       </section>
 
       <section class="page-contact-footer">
@@ -145,68 +155,75 @@
     </section>
 
     <section class="page-view" data-view="videos">
-      <div class="page-hero page-hero-compact">
-        <h1>Videos</h1>
-      </div>
-
       <section id="latest-release" class="feature-section">
         <div class="release-embed">
           <article class="feature-card video-card">
+            <p class="video-card-title">Performing as a Special Guest with Raskasta Joulua</p>
             <button
               type="button"
               class="video-launch"
               data-video-id="n0khkeWIdFY"
-              aria-label="Play Juho Ranta-Maunus video">
+              data-video-title="Performing as a Special Guest with Raskasta Joulua"
+              aria-label="Play Performing as a Special Guest with Raskasta Joulua">
             </button>
           </article>
 
           <article class="feature-card video-card">
+            <p class="video-card-title">Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)</p>
             <button
               type="button"
               class="video-launch"
               data-video-id="J2ENARBpOxs"
-              aria-label="Play Juho Ranta-Maunus video">
+              data-video-title="Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)"
+              aria-label="Play Tribute to Ozzy Osbourne - No More Tears">
             </button>
           </article>
 
           <article class="feature-card video-card">
+            <p class="video-card-title">Kiko Loureiro - Overflow (Cover by JRM)</p>
             <button
               type="button"
               class="video-launch"
               data-video-id="5T9WabbhVxU"
-              aria-label="Play Juho Ranta-Maunus video">
+              data-video-title="Kiko Loureiro - Overflow (Cover by JRM)"
+              aria-label="Play Kiko Loureiro - Overflow (Cover by JRM)">
             </button>
           </article>
 
           <article class="feature-card video-card">
+            <p class="video-card-title">Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)</p>
             <button
               type="button"
               class="video-launch"
               data-video-id="53GDvHtgIms"
-              aria-label="Play Juho Ranta-Maunus video">
+              data-video-title="Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)"
+              aria-label="Play Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel and Jabin Rodas)">
             </button>
           </article>
 
           <article class="feature-card video-card">
+            <p class="video-card-title">Juho Ranta-Maunus - The Drift (Playthrough)</p>
             <button
               type="button"
               class="video-launch"
               data-video-id="J1r45Sk8siU"
-              aria-label="Play Juho Ranta-Maunus video">
+              data-video-title="Juho Ranta-Maunus - The Drift (Playthrough)"
+              aria-label="Play Juho Ranta-Maunus - The Drift (Playthrough)">
             </button>
           </article>
 
           <article class="feature-card video-card">
+            <p class="video-card-title">Dream Theater - Hollow Years (solo by JRM)</p>
             <button
               type="button"
               class="video-launch"
               data-video-id="m8sOLzpLIQo"
-              aria-label="Play Juho Ranta-Maunus video">
+              data-video-title="Dream Theater - Hollow Years (solo by JRM)"
+              aria-label="Play Dream Theater - Hollow Years (solo by JRM)">
             </button>
           </article>
 
         </div>
-        <p class="videos-note">More videos coming soon.</p>
       </section>
 
       <section class="page-contact-footer">
@@ -220,10 +237,6 @@
     </section>
 
     <section class="page-view" data-view="music">
-      <div class="page-hero page-hero-compact">
-        <h1>Music</h1>
-      </div>
-
       <section id="music">
         <div class="music-frame">
           <iframe
@@ -287,34 +300,8 @@
     </section>
 
     <section class="page-view" data-view="press">
-      <div class="page-hero page-hero-compact">
-        <h1>Press</h1>
-      </div>
-
       <section id="press" class="feature-section">
         <div class="press-grid">
-          <article class="press-card">
-            <h2>A Young Guitarist of the Year returns</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Guitar World</span>
-                <a class="press-quote-link" href="https://www.guitarworld.com/news/young-guitarist-of-the-year-extreme-metal-toto-essential-guitar-tracks" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">September 29, 2023</p>
-            </div>
-          </article>
-
-          <article class="press-card">
-            <h2>Juho Ranta-Maunus wins Young Guitarist of the Year 2020</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Guitar World</span>
-                <a class="press-quote-link" href="https://www.guitarworld.com/news/juho-ranta-maunus-wins-young-guitarist-of-the-year-2020" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">December 22, 2020</p>
-            </div>
-          </article>
-
           <article class="press-card">
             <h2>Juho performs in Elämäni Biisi TV Show with renowned guitarists Timo Kämäräinen, Tuomas Wäinölä and Erkka Korhonen</h2>
             <div class="press-meta">
@@ -323,39 +310,6 @@
                 <a class="press-quote-link" href="https://areena.yle.fi/1-76704332" target="_blank" rel="noreferrer">Read article</a>
               </div>
               <p class="press-date">January 3, 2026</p>
-            </div>
-          </article>
-
-          <article class="press-card">
-            <h2>Suomen lupaavin nuori kitaristi Juho Ranta-Maunus keräsi videolleen nimekkäitä kepittäjiä</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Metalliluola</span>
-                <a class="press-quote-link" href="https://metalliluola.fi/suomen-lupaavin-nuori-kitaristi-juho-ranta-maunus-kerasi-videolleen-nimekkaita-kepittajia/" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">January 7, 2024</p>
-            </div>
-          </article>
-
-          <article class="press-card">
-            <h2>Juho Ranta-Maunus | Artists | Ibanez guitars</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Ibanez</span>
-                <a class="press-quote-link" href="https://www.ibanez.com/eu/artists/detail/1633.html" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">Artist page</p>
-            </div>
-          </article>
-
-          <article class="press-card">
-            <h2>Meet 2020's Guitarists of the Year</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Guitar World</span>
-                <a class="press-quote-link" href="https://www.guitarworld.com/features/meet-2020s-guitarists-of-the-year" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">April 9, 2021</p>
             </div>
           </article>
 
@@ -371,13 +325,24 @@
           </article>
 
           <article class="press-card">
-            <h2>Tu­let­ko soit­ta­maan ki­ta­ra­soo­lon Elämäni biisi -jak­sos­sa?</h2>
+            <h2>Suomen lupaavin nuori kitaristi Juho Ranta-Maunus keräsi videolleen nimekkäitä kepittäjiä</h2>
             <div class="press-meta">
               <div class="press-source-row">
-                <span>Ilkka-Pohjalainen</span>
-                <a class="press-quote-link" href="https://www.ilkkapohjalainen.fi/seinajokelainen-juho-herasi-puheluun-tuletko-soitt/12521905" target="_blank" rel="noreferrer">Read article</a>
+                <span>Metalliluola</span>
+                <a class="press-quote-link" href="https://metalliluola.fi/suomen-lupaavin-nuori-kitaristi-juho-ranta-maunus-kerasi-videolleen-nimekkaita-kepittajia/" target="_blank" rel="noreferrer">Read article</a>
               </div>
-              <p class="press-date">Ilkka-Pohjalainen</p>
+              <p class="press-date">January 7, 2024</p>
+            </div>
+          </article>
+
+          <article class="press-card">
+            <h2>A Young Guitarist of the Year returns</h2>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Guitar World</span>
+                <a class="press-quote-link" href="https://www.guitarworld.com/news/young-guitarist-of-the-year-extreme-metal-toto-essential-guitar-tracks" target="_blank" rel="noreferrer">Read article</a>
+              </div>
+              <p class="press-date">September 29, 2023</p>
             </div>
           </article>
 
@@ -389,6 +354,17 @@
                 <a class="press-quote-link" href="https://metalliluola.fi/nuori-kitarataituri-juho-ranta-maunus-julkaisi-the-drift-singlen/" target="_blank" rel="noreferrer">Read article</a>
               </div>
               <p class="press-date">September 29, 2023</p>
+            </div>
+          </article>
+
+          <article class="press-card">
+            <h2>Maailman parhaalta nuorelta kitaristilta Juho Ranta-Maunukselta soolo-EP</h2>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>KaaosZine</span>
+                <a class="press-quote-link" href="https://kaaoszine.fi/maailman-parhaalta-nuorelta-kitaristilta-juho-ranta-maunukselta-soolo-ep/" target="_blank" rel="noreferrer">Read article</a>
+              </div>
+              <p class="press-date">January 2, 2023</p>
             </div>
           </article>
 
@@ -415,13 +391,24 @@
           </article>
 
           <article class="press-card">
-            <h2>14-vuotias suomalainen on maailman paras nuori kitaristi</h2>
+            <h2>Guitar World -lehden nuori kitaristi-voittaja Juho Ranta-Maunus julkaisi soittovideon uudesta kappaleestaan</h2>
             <div class="press-meta">
               <div class="press-source-row">
-                <span>Yle Uutiset</span>
-                <a class="press-quote-link" href="https://yle.fi/a/3-11712421" target="_blank" rel="noreferrer">Read article</a>
+                <span>KaaosZine</span>
+                <a class="press-quote-link" href="https://kaaoszine.fi/guitar-world-lehden-nuori-kitaristi-voittaja-juho-ranta-maunus-julkaisi-soittovideon-uudesta-kappaleestaan/" target="_blank" rel="noreferrer">Read article</a>
               </div>
-              <p class="press-date">December 22, 2020</p>
+              <p class="press-date">April 22, 2021</p>
+            </div>
+          </article>
+
+          <article class="press-card">
+            <h2>Meet 2020's Guitarists of the Year</h2>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Guitar World</span>
+                <a class="press-quote-link" href="https://www.guitarworld.com/features/meet-2020s-guitarists-of-the-year" target="_blank" rel="noreferrer">Read article</a>
+              </div>
+              <p class="press-date">April 9, 2021</p>
             </div>
           </article>
 
@@ -437,38 +424,48 @@
           </article>
 
           <article class="press-card">
-            <h2>Guitar World -lehden nuori kitaristi-voittaja Juho Ranta-Maunus julkaisi soittovideon uudesta kappaleestaan</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>KaaosZine</span>
-                <a class="press-quote-link" href="https://kaaoszine.fi/guitar-world-lehden-nuori-kitaristi-voittaja-juho-ranta-maunus-julkaisi-soittovideon-uudesta-kappaleestaan/" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">April 22, 2021</p>
-            </div>
-          </article>
-
-          <article class="press-card">
-            <h2>Introducing your Young Guitarist of the Year 2020 finalists</h2>
+            <h2>Juho Ranta-Maunus wins Young Guitarist of the Year 2020</h2>
             <div class="press-meta">
               <div class="press-source-row">
                 <span>Guitar World</span>
-                <a class="press-quote-link" href="https://www.guitarworld.com/news/introducing-your-young-guitarist-of-the-year-2020-finalists" target="_blank" rel="noreferrer">Read article</a>
+                <a class="press-quote-link" href="https://www.guitarworld.com/news/juho-ranta-maunus-wins-young-guitarist-of-the-year-2020" target="_blank" rel="noreferrer">Read article</a>
               </div>
-              <p class="press-date">December 7, 2020</p>
+              <p class="press-date">December 22, 2020</p>
             </div>
           </article>
 
           <article class="press-card">
-            <h2>Maailman parhaalta nuorelta kitaristilta Juho Ranta-Maunukselta soolo-EP</h2>
+            <h2>14-vuotias suomalainen on maailman paras nuori kitaristi</h2>
             <div class="press-meta">
               <div class="press-source-row">
-                <span>KaaosZine</span>
-                <a class="press-quote-link" href="https://kaaoszine.fi/maailman-parhaalta-nuorelta-kitaristilta-juho-ranta-maunukselta-soolo-ep/" target="_blank" rel="noreferrer">Read article</a>
+                <span>Yle Uutiset</span>
+                <a class="press-quote-link" href="https://yle.fi/a/3-11712421" target="_blank" rel="noreferrer">Read article</a>
               </div>
-              <p class="press-date">January 2, 2023</p>
+              <p class="press-date">December 22, 2020</p>
             </div>
           </article>
 
+          <article class="press-card">
+            <h2>Juho Ranta-Maunus | Artists | Ibanez guitars</h2>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Ibanez</span>
+                <a class="press-quote-link" href="https://www.ibanez.com/eu/artists/detail/1633.html" target="_blank" rel="noreferrer">Read article</a>
+              </div>
+              <p class="press-date">Artist page</p>
+            </div>
+          </article>
+
+          <article class="press-card">
+            <h2>Tu­let­ko soit­ta­maan ki­ta­ra­soo­lon Elämäni biisi -jak­sos­sa?</h2>
+            <div class="press-meta">
+              <div class="press-source-row">
+                <span>Ilkka-Pohjalainen</span>
+                <a class="press-quote-link" href="https://www.ilkkapohjalainen.fi/seinajokelainen-juho-herasi-puheluun-tuletko-soitt/12521905" target="_blank" rel="noreferrer">Read article</a>
+              </div>
+              <p class="press-date">Ilkka-Pohjalainen</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -483,10 +480,6 @@
     </section>
 
     <section class="page-view" data-view="shows">
-      <div class="page-hero page-hero-compact">
-        <h1>Shows</h1>
-      </div>
-
       <section id="shows" class="feature-section">
         <div id="showsList"></div>
         <p class="booking-note" id="showsStatus">Loading shows...</p>
@@ -506,10 +499,6 @@
     </section>
 
     <section class="page-view" data-view="contact">
-      <div class="page-hero page-hero-compact">
-        <h1>Contact</h1>
-      </div>
-
       <section id="contact">
         <div class="contact-panel">
           <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>

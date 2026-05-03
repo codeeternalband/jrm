@@ -1,257 +1,1629 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juho Ranta-Maunus Website</title>
-  <meta name="description" content="Juho Ranta-Maunus Website featuring biography, videos, music, press, shows and contact information." />
-  <meta name="keywords" content="Juho Ranta-Maunus Website, Juho Ranta-Maunus, guitarist, music, official website" />
-  <meta property="og:title" content="Juho Ranta-Maunus Website" />
-  <meta property="og:description" content="Juho Ranta-Maunus Website." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://codeeternalband.github.io/jrm/" />
-  <link rel="icon" type="image/png" href="assets/images/Logo JRM.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=32" />
-</head>
+/* === CODE ETERNAL STYLES === */
+:root {
+  --accent: #ff9d00;
+  --accent-rgb: 255, 157, 0;
+  --accent-soft-rgb: 255, 201, 102;
+  --bg: #030303;
+  --bg-alt: #0b0907;
+  --border: #2d1d10;
+  --text: #fffaf3;
+  --muted-link: #e0b07b;
+  --font-body: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+}
 
-<body>
-  <nav class="navbar">
-    <a href="#home" class="logo-link" aria-label="Go to home">
-      <img src="assets/images/Logo JRM.png" alt="Juho Ranta-Maunus Website logo" class="logo" width="200" height="60" />
-    </a>
-    <div class="nav-right">
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
-        <span>Menu</span>
-      </button>
-      <div class="nav-links" id="primaryNav">
-        <a href="#home" data-view-link="home">Home</a>
-        <a href="#biography" data-view-link="biography">Bio</a>
-        <a href="#videos" data-view-link="videos">Videos</a>
-        <a href="#music" data-view-link="music">Music</a>
-        <a href="#press" data-view-link="press">Press</a>
-        <a href="#shows" data-view-link="shows">Shows</a>
-        <a href="#contact" data-view-link="contact">Contact</a>
-      </div>
-      <div class="nav-socials">
-        <a href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener" aria-label="YouTube">
-          <img class="social-youtube" src="assets/images/Nettisivu/Youtube.png" alt="YouTube" width="38" height="38" loading="lazy" decoding="async" />
-        </a>
-        <a href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank" rel="noopener" aria-label="Spotify">
-          <img src="assets/images/Nettisivu/Spotify.png" alt="Spotify" width="38" height="38" loading="lazy" decoding="async" />
-        </a>
-        <a href="https://www.instagram.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img class="social-instagram" src="assets/images/Nettisivu/Instagram.webp" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" />
-        </a>
-        <a href="https://www.facebook.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="assets/images/Nettisivu/Facebook.webp" alt="Facebook" width="38" height="38" loading="lazy" decoding="async" />
-        </a>
-      </div>
-    </div>
-  </nav>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <main class="site-main">
-    <!-- HOME VIEW -->
-    <section class="page-view page-home is-active" data-view="home">
-      <div class="hero">
-        <h1 class="sr-only">Juho Ranta-Maunus Website</h1>
-        <div class="hero-media">
-          <video class="hero-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true">
-            <source src="assets/videos/raskasta-joulua-solo-hero.webm" type="video/webm" />
-          </video>
-          <div class="hero-overlay-copy">
-            <p class="hero-kicker">Juho Ranta-Maunus</p>
-            <h2 class="hero-title">Juho's guitar <span class="hero-nowrap">work, releases</span> and updates <span class="hero-nowrap">all in one place.</span></h2>
-            <div class="hero-actions">
-              <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener">Watch</a>
-              <a class="feature-link" href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank" rel="noopener">Listen</a>
-            </div>
-          </div>
-          <span class="hero-credit">Video: Performing as a Special Guest with Raskasta Joulua</span>
-        </div>
-      </div>
+html {
+  scroll-behavior: smooth;
+}
 
-      <section class="home-booking" aria-labelledby="bookingTitle">
-        <div class="booking-cta-card">
-          <div class="booking-cta-copy">
-            <h2 id="bookingTitle">Book Juho for a <span class="booking-nowrap">solo performance!</span></h2>
-            <p class="booking-cta-lead">Use the form below to send a booking inquiry for solo performances, private events, interviews, special appearances, and more.</p>
-          </div>
-          <form class="booking-form" data-booking-form action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New solo booking inquiry" />
-            <input type="hidden" name="_autoresponse" value="Thanks for your message! I will get back to you as soon as possible!" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="booking-honeypot" />
-            <label class="booking-field">
-              <span>Your name</span>
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-            <label class="booking-field">
-              <span>Your email</span>
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-            <label class="booking-field">
-              <span>Event</span>
-              <input type="text" name="event" required />
-            </label>
-            <label class="booking-field booking-field-full">
-              <span>Message</span>
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <button class="feature-link booking-submit" type="submit">Send Message</button>
-          </form>
-        </div>
-      </section>
-    </section>
+body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text);
+  text-align: center;
+  background: var(--bg);
+  -webkit-tap-highlight-color: transparent;
+}
 
-    <!-- BIOGRAPHY VIEW -->
-    <section class="page-view" data-view="biography">
-      <section id="biography">
-        <p>Juho Ranta-Maunus (born June 29, 2006) is a <span id="currentAge"></span>-year-old guitarist from Finland.</p>
-        <p>Juho has studied guitar and music theory for more than a decade, alongside piano, ensemble work and performance studies. He has also taken part in summer programs at Berklee College of Music and Musicians Institute. He holds artist endorsements with Ibanez, Neural DSP and Levytukku. Among his most notable appearances are performances as a special guest with Finland's largest live production, Raskasta Joulua, and on the Elämäni Biisi (Song Of My Life) TV show in 2026.</p>
-        <p>He is the founder of the Finnish progressive metal band Code Eternal, where he works as lead guitarist, composer and arranger. He has also worked with melodic metalcore band Averse.</p>
-        <p>His playing was recognized internationally after winning Guitar World magazine’s <em>Young Guitarist of the Year</em> in 2020, and he has continued to build his path through solo releases, band work and live performances.</p>
-        <p>He will begin his studies in the performance program at Metropolia University of Applied Sciences in the fall of 2026. He is currently working on Code Eternal's debut album, and new solo material will also be released during 2026.</p>
-        <section class="bio-gear" aria-labelledby="bioGearTitle">
-          <h2 id="bioGearTitle">Gear</h2>
-          <ul class="bio-gear-list">
-            <li>Ibanez AZ242PBG-CKB</li>
-            <li>Neural DSP Quad Cortex</li>
-            <li>Dunlop strings and picks</li>
-          </ul>
-        </section>
-        <div class="bio-endorsement">
-          <img src="assets/icons/Ibanez_logo.svg.png" alt="Ibanez" class="bio-endorsement-logo" width="420" height="103" />
-          <img src="assets/icons/levytukku.png" alt="Levytukku" class="bio-endorsement-logo" width="320" height="93" />
-          <img src="assets/icons/Neural_SP_logo.png" alt="Neural DSP" class="bio-endorsement-logo" width="420" height="237" />
-        </div>
-      </section>
-    </section>
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(22, 13, 7, 0.78), rgba(22, 13, 7, 0.78)),
+    url("assets/images/Kuva-Tausta2.jpg") center / cover no-repeat;
+  filter: blur(1.5px);
+  transform: scale(1.01);
+  z-index: -2;
+  pointer-events: none;
+}
 
-    <!-- VIDEOS VIEW -->
-    <section class="page-view" data-view="videos">
-      <section id="latest-release" class="feature-section">
-        <div class="release-embed">
-          <article class="feature-card video-card">
-            <p class="video-card-title">Performing as a Special Guest with Raskasta Joulua</p>
-            <button type="button" class="video-launch" data-video-id="n0khkeWIdFY" data-video-title="Performing as a Special Guest with Raskasta Joulua" aria-label="Play Performing as a Special Guest with Raskasta Joulua"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)</p>
-            <button type="button" class="video-launch" data-video-id="J2ENARBpOxs" data-video-title="Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)" aria-label="Play Tribute to Ozzy Osbourne - No More Tears"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Kiko Loureiro - Overflow (Cover by JRM)</p>
-            <button type="button" class="video-launch" data-video-id="5T9WabbhVxU" data-video-title="Kiko Loureiro - Overflow (Cover by JRM)" aria-label="Play Kiko Loureiro - Overflow (Cover by JRM)"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Juho Ranta-Maunus - The Drift (Playthrough)</p>
-            <button type="button" class="video-launch" data-video-id="J1r45Sk8siU" data-video-title="Juho Ranta-Maunus - The Drift (Playthrough)" aria-label="Play Juho Ranta-Maunus - The Drift (Playthrough)"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Dream Theater - Hollow Years (solo by JRM)</p>
-            <button type="button" class="video-launch" data-video-id="m8sOLzpLIQo" data-video-title="Dream Theater - Hollow Years (solo by JRM)" aria-label="Play Dream Theater - Hollow Years (solo by JRM)"></button>
-          </article>
-        </div>
-        <div class="feature-actions">
-          <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener">More videos on YouTube</a>
-        </div>
-      </section>
-    </section>
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(var(--accent-rgb), 0.12), transparent 24%),
+    radial-gradient(circle at 80% 18%, rgba(var(--accent-soft-rgb), 0.08), transparent 20%),
+    linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26));
+  z-index: -1;
+  pointer-events: none;
+}
 
-    <!-- MUSIC VIEW -->
-    <section class="page-view" data-view="music">
-      <section id="music">
-        <div class="music-frame">
-          <iframe src="https://open.spotify.com/embed/artist/1d55VFNm8Qci0DEQoEW0xy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" class="music-embed" title="Spotify Player"></iframe>
-        </div>
-        <div class="music-copy">
-          <section class="music-block">
-            <h2>Band Releases (Spotify)</h2>
-            <p class="music-role">Code Eternal (2021-) founder, lead guitarist, composer, arranger</p>
-            <div class="music-release-list">
-              <p><strong>Code Eternal</strong> (singles, 2025-2026)</p>
-              <ul class="music-track-list"><li>Brace Yourself</li><li>Voices Call</li></ul>
-              <p><strong>Averse - Twisted Mind</strong> (EP, 2025)</p>
-              <ul class="music-track-list"><li>Twisted Mind</li><li>Sinkin'</li><li>Redness</li></ul>
-            </div>
-          </section>
-          <section class="music-block">
-            <h2>Solo Releases (Spotify)</h2>
-            <div class="music-release-list">
-              <p><strong>The Drift</strong> (single, 2023)</p>
-              <p><strong>Stormchaser</strong> (EP, 2023)</p>
-              <ul class="music-track-list"><li>Stormchaser</li><li>Shades of Dawn</li><li>Cliffhanger</li></ul>
-            </div>
-          </section>
-        </div>
-      </section>
-    </section>
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-    <!-- PRESS VIEW -->
-    <section class="page-view" data-view="press">
-      <section id="press" class="feature-section">
-        <div class="press-grid">
-          <article class="press-card">
-            <h2>Juho performs in Elämäni Biisi TV Show</h2>
-            <div class="press-meta">
-              <div class="press-source-row"><span>Yle Areena</span><a class="press-quote-link" href="https://areena.yle.fi/1-76704332" target="_blank" rel="noreferrer">Read article</a></div>
-              <p class="press-date">January 3, 2026</p>
-            </div>
-          </article>
-          <article class="press-card">
-            <h2>Suomen lupaavin nuori kitaristi Juho Ranta-Maunus</h2>
-            <div class="press-meta">
-              <div class="press-source-row"><span>Metalliluola</span><a class="press-quote-link" href="https://metalliluola.fi/suomen-lupaavin-nuori-kitaristi-juho-ranta-maunus-kerasi-videolleen-nimekkaita-kepittajia/" target="_blank" rel="noreferrer">Read article</a></div>
-              <p class="press-date">January 7, 2024</p>
-            </div>
-          </article>
-          <article class="press-card">
-            <h2>Meet 2020's Guitarists of the Year</h2>
-            <div class="press-meta">
-              <div class="press-source-row"><span>Guitar World</span><a class="press-quote-link" href="https://www.guitarworld.com/features/meet-2020s-guitarists-of-the-year" target="_blank" rel="noreferrer">Read article</a></div>
-              <p class="press-date">April 9, 2021</p>
-            </div>
-          </article>
-        </div>
-      </section>
-    </section>
+/* Peruskuvien rajoitus – auttaa latauksessa ja layoutissa */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-    <!-- SHOWS VIEW -->
-    <section class="page-view" data-view="shows">
-      <section id="shows" class="feature-section">
-        <div id="showsList"></div>
-        <p class="booking-note" id="showsStatus">Loading shows...</p>
-      </section>
-    </section>
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:
+    linear-gradient(180deg, rgba(18, 16, 14, 0.94), rgba(8, 7, 6, 0.9)),
+    linear-gradient(90deg, rgba(var(--accent-rgb), 0.08), transparent 22%, transparent 78%, rgba(var(--accent-rgb), 0.08));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 18px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
 
-    <!-- CONTACT VIEW -->
-    <section class="page-view" data-view="contact">
-      <section id="contact">
-        <div class="booking-cta-card">
-          <div class="booking-cta-copy">
-            <p class="booking-cta-kicker">Contact</p>
-            <p class="booking-cta-lead">Use the form below to send a booking inquiry for solo performances, private events, interviews, special appearances, and more.</p>
-          </div>
-          <form class="booking-form" data-booking-form action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New solo booking inquiry" />
-            <input type="text" name="name" autocomplete="name" placeholder="Your Name" required />
-            <input type="email" name="email" autocomplete="email" placeholder="Your Email" required />
-            <input type="text" name="event" placeholder="Event/Subject" required />
-            <textarea name="message" rows="5" placeholder="Your Message" class="booking-field-full" required></textarea>
-            <button class="feature-link booking-submit" type="submit">Send Message</button>
-          </form>
-        </div>
-      </section>
-    </section>
-  </main>
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.5), transparent);
+  pointer-events: none;
+}
 
-  <footer>
-    <p class="footer-contact-copy">For live bookings, interviews, media inquiries, and other requests, contact:</p>
-    <p class="footer-contact-email">jrmguitarofficial@gmail.com</p>
-    <p>&copy; <span id="year"></span> Juho Ranta-Maunus Website. All rights reserved.</p>
-  </footer>
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+  padding-right: 12px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.logo {
+  width: 92px;
+  height: auto;
+  filter: invert(1);
+  transform: scale(1.1);
+  transform-origin: left center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+  margin: 0 0 0 auto;
+}
+
+.nav-links a {
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 0;
+  font-size: 15px;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+  z-index: 0;
+  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(var(--accent-rgb), 0.12);
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.12);
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: -1;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  transform: scale(1.03);
+  text-shadow: 0 0 14px rgba(var(--accent-rgb), 0.22);
+}
+
+.nav-links a:hover::before,
+.nav-links a.is-active::before {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 22px rgba(var(--accent-rgb), 0.18);
+}
+
+.nav-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  margin-left: auto;
+  padding-left: 14px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-socials a {
+  margin-left: 0;
+}
+
+.nav-socials img {
+  width: auto;
+  height: 26px;
+  max-width: 40px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.social-youtube {
+  max-width: 46px;
+  transform: translateX(-1px) scale(1.08);
+  transform-origin: center;
+}
+
+.social-instagram {
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+.nav-socials img:hover {
+  transform: scale(1.15);
+}
+
+.social-youtube:hover {
+  transform: translateX(-1px) scale(1.16);
+}
+
+/* ===== MENU BUTTON (DESKTOP HIDDEN) ===== */
+.menu-btn {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: #0a0a0a;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    color 0.2s,
+    background 0.2s,
+    transform 0.12s;
+}
+
+.menu-btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.25);
+  color: var(--accent);
+}
+
+.menu-btn:active {
+  transform: scale(0.98);
+}
+
+.menu-btn::before,
+.menu-btn::after {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  display: block;
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease,
+    width 0.2s ease,
+    box-shadow 0.2s;
+}
+
+.menu-btn::before {
+  box-shadow: 0 -6px 0 0 currentColor, 0 6px 0 0 currentColor;
+}
+
+.menu-btn[aria-expanded="true"]::before {
+  box-shadow: none;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 1320px) {
+  .navbar {
+    gap: 12px;
+    padding: 8px 14px;
+  }
+
+  .nav-right {
+    gap: 14px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    letter-spacing: 0.55px;
+  }
+
+  .nav-socials {
+    gap: 12px;
+  }
+
+  .nav-socials img {
+    width: 26px;
+    height: 26px;
+  }
+
+}
+
+.menu-btn[aria-expanded="true"]::after {
+  transform: rotate(-45deg) translateY(-2px);
+  width: 18px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding-top: 70px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-media {
+  position: relative;
+  width: 100%;
+  height: clamp(460px, 58vh, 820px);
+  background: #000;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.12) 18%, rgba(0, 0, 0, 0.12) 82%, rgba(0, 0, 0, 0.4) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.1) 18%, rgba(0, 0, 0, 0.1) 82%, rgba(0, 0, 0, 0.36) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-credit {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+  font-family: var(--font-body);
+  font-size: 8px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 34px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  scroll-margin-top: 90px;
+}
+
+.feature-section {
+  max-width: 1100px;
+}
+
+#biography {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#biography p {
+  max-width: none;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+#biography p:only-child {
+  text-align: center;
+}
+
+#biography p + p {
+  margin-top: 16px;
+}
+
+.bio-gear {
+  margin-top: 28px;
+  padding: 20px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.008)),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.08), rgba(0, 0, 0, 0.12));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  text-align: left;
+}
+
+.bio-gear h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+}
+
+.bio-gear-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.bio-gear-list li {
+  line-height: 1.5;
+}
+
+.bio-endorsement {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.008)),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.08), rgba(0, 0, 0, 0.12));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.bio-endorsement-logo {
+  display: block;
+  max-width: 100%;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  flex: 0 1 auto;
+}
+
+.bio-endorsement-logo:nth-child(1) {
+  max-width: min(170px, 18vw);
+  max-height: 42px;
+  margin-right: 24px;
+}
+
+.bio-endorsement-logo:nth-child(2) {
+  max-width: min(210px, 18vw);
+  max-height: 54px;
+}
+
+.bio-endorsement-logo:nth-child(3) {
+  max-width: min(230px, 20vw);
+  max-height: none;
+  height: auto;
+  margin-left: 28px;
+}
+
+@media (max-width: 760px) {
+  .bio-endorsement {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .bio-gear {
+    padding: 18px;
+  }
+
+  .bio-gear h2 {
+    font-size: 18px;
+  }
+
+  .bio-endorsement-logo {
+    display: block;
+    max-width: min(190px, 60vw);
+    max-height: 38px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-inline: auto;
+    transform: none;
+  }
+
+  .bio-endorsement-logo:nth-child(1) {
+    max-width: min(150px, 48vw);
+    max-height: 34px;
+    transform: translateX(-44px);
+  }
+
+  .bio-endorsement-logo:nth-child(2) {
+    max-width: min(180px, 56vw);
+    max-height: 40px;
+    transform: translateY(4px);
+  }
+
+  .bio-endorsement-logo:nth-child(3) {
+    max-width: min(145px, 46vw);
+    max-height: none;
+    height: auto;
+    transform: translateX(38px);
+  }
+}
+
+h2 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-size: 26px;
+  color: var(--text);
+  letter-spacing: 1.2px;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+a {
+  color: inherit;
+}
+
+.contact-link {
+  color: var(--text);
+}
+
+.feature-card,
+.contact-panel,
+.press-card {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.08), rgba(0, 0, 0, 0.12));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.press-card {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 11px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  text-align: left;
+  border-radius: 12px;
+}
+
+.press-card h2 {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.24;
+  letter-spacing: 0.2px;
+  text-transform: none;
+}
+
+.press-quote {
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.press-quote-link {
+  display: inline;
+  white-space: nowrap;
+  color: var(--muted-link);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.press-quote-link::before {
+  content: "↗";
+  font-size: 0.9em;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
+.press-quote-link:hover {
+  opacity: 0.8;
+}
+
+.press-meta {
+  display: grid;
+  justify-items: start;
+  margin-top: auto;
+  padding-top: 2px;
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.press-source-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+  flex-wrap: wrap;
+  color: var(--text);
+}
+
+.press-date {
+  margin: 2px 0 0;
+  font-size: 9px;
+  letter-spacing: 0.9px;
+  color: rgba(255, 255, 255, 0.46);
+}
+
+@media (min-width: 760px) {
+  .press-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+.feature-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.release-embed {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.video-card {
+  max-width: none;
+  width: 100%;
+  padding: 16px;
+}
+
+.video-card-title {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(13px, 1.35vw, 15px);
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.video-card iframe,
+.video-launch {
+  margin-top: 0;
+}
+
+.release-embed iframe,
+.video-launch {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin-top: 0;
+}
+
+.video-launch {
+  position: relative;
+  display: block;
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.video-launch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.18)),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.06), transparent 50%);
+}
+
+.video-launch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 28px solid rgba(255, 255, 255, 0.74);
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.45));
+  pointer-events: none;
+}
+
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 16px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--accent-rgb), 0.42);
+  background: rgba(var(--accent-rgb), 0.14);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  transition: transform 0.15s, border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.feature-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(var(--accent-soft-rgb), 0.78);
+  background: rgba(var(--accent-rgb), 0.22);
+  box-shadow: 0 0 22px rgba(var(--accent-rgb), 0.2);
+}
+
+iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  margin-top: 18px;
+  border-radius: 14px;
+}
+
+#music {
+  padding-top: 40px;
+  max-width: 1180px;
+}
+
+.music-frame {
+  max-width: 920px;
+  margin: 18px auto 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.08), rgba(0, 0, 0, 0.12));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.music-embed {
+  display: block;
+  width: 100%;
+  height: 550px;
+  margin-top: 0;
+  border: none;
+  border-radius: 14px;
+}
+
+.music-copy {
+  max-width: 1180px;
+  margin: 26px auto 0;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: grid;
+  gap: 22px;
+  text-align: left;
+  justify-items: stretch;
+  justify-content: start;
+}
+
+.music-block {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  text-align: left;
+  justify-self: start;
+  width: 100%;
+}
+
+.music-block-solo {
+  margin-left: 0;
+}
+
+#music .music-block h2 {
+  margin-bottom: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+  max-width: none;
+  justify-self: start;
+  width: 100%;
+}
+
+#music .music-block p,
+#music .music-block ul {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+  max-width: none;
+  justify-self: start;
+  width: 100%;
+}
+
+.music-role {
+  margin: 0 0 14px;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.music-release-list p {
+  margin: 10px 0 0;
+  max-width: none;
+}
+
+.music-track-list {
+  margin: 8px 0 4px 18px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.music-track-list li + li {
+  margin-top: 4px;
+}
+
+footer {
+  padding: 42px 20px 28px;
+  font-size: 13px;
+  background: #000;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-contact-copy {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.footer-contact-email {
+  margin: 14px 0 18px;
+}
+
+footer .contact-link {
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+footer p:last-child {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68) !important;
+}
+
+@media (min-width: 1180px) {
+  .press-grid {
+    max-width: 1240px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 860px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .navbar {
+    position: fixed;
+    gap: 10px;
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    min-width: 112px;
+    justify-content: flex-start;
+    line-height: 0;
+    padding-right: 0;
+  }
+
+  .logo {
+    width: 84px;
+    height: auto;
+    transform: scale(1.08);
+    transform-origin: left center;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px;
+    flex: 0 0 auto;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 8px !important;
+    margin-right: 18px;
+    gap: 0 !important;
+    flex-shrink: 0;
+  }
+
+  .menu-btn span {
+    display: none;
+  }
+
+  .menu-btn::before,
+  .menu-btn::after {
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 -7px 0 0 currentColor, 0 7px 0 0 currentColor;
+    opacity: 0.95;
+  }
+
+  .menu-btn[aria-expanded="true"]::before {
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+
+  .menu-btn[aria-expanded="true"]::after {
+    transform: rotate(-45deg) translateY(-2px);
+    width: 22px;
+  }
+
+  .nav-socials {
+    margin-left: 0;
+    gap: 8px;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .nav-socials img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 12px;
+    top: calc(100% + 8px);
+    width: min(calc(100vw - 24px), 360px);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.92), rgba(8, 8, 8, 0.92));
+    backdrop-filter: blur(8px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+    animation: menuIn 0.18s ease-out both;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: left;
+    padding: 11px 12px;
+    border-radius: 10px;
+    font-family: var(--font-display);
+    letter-spacing: 0.65px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.95;
+    transition:
+      background 0.15s,
+      color 0.15s,
+      transform 0.06s;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--accent);
+  }
+
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero-media {
+    height: 34vh;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  section p {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 40px 16px;
+    scroll-margin-top: 56px;
+  }
+
+  #biography {
+    padding: 20px;
+  }
+
+  #music {
+    padding-top: 56px;
+    padding-bottom: 10px;
+  }
+
+  iframe {
+    height: 220px;
+  }
+
+  .music-embed {
+    height: 530px;
+  }
+
+  .music-frame {
+    padding: 20px 18px;
+  }
+
+  .feature-card,
+  .contact-panel,
+  .press-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .press-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .video-card,
+  .music-frame {
+    padding: 16px;
+  }
+
+  .press-grid {
+    gap: 10px;
+  }
+
+  .feature-link {
+    width: 100%;
+    min-width: 0;
+    font-size: 13px;
+    padding: 13px 18px;
+  }
+
+}
+
+/* ===== Animations ===== */
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SHOWS ===== */
+#shows {
+  padding-top: 40px;
+}
+
+#showsList {
+  display: grid;
+  gap: 20px;
+}
+
+.shows-section {
+  width: min(100%, 920px);
+  margin: 0 auto;
+}
+
+.shows-grid {
+  list-style: none;
+  display: block;
+  margin: 12px auto 0;
+  padding: 0;
+  max-width: 920px;
+}
+
+.shows-section-title {
+  margin: 0 auto;
+  max-width: 920px;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.show-card {
+  position: relative;
+  margin-top: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.show-meta {
+  display: grid;
+  justify-items: start;
+  gap: 2px;
+  text-align: left;
+}
+
+.show-venue {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.show-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.show-date {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.show-separator {
+  opacity: 0.45;
+}
+
+.show-city {
+  font-size: 12px;
+  line-height: 1.25;
+  opacity: 1;
+  margin: 0;
+}
+
+.booking-note {
+  margin-top: 32px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.contact-email-row {
+  margin-top: 16px;
+}
+
+.contact-panel .contact-link {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.page-contact-footer {
+  max-width: 1180px;
+  margin: 38px auto 0;
+  padding: 0 20px;
+}
+
+.page-contact-footer .contact-panel {
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+[data-view="contact"] .contact-panel {
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ===== SINGLE-URL PAGE VIEWS ===== */
+.site-main {
+  padding-top: 44px;
+}
+
+.page-view {
+  display: none;
+  min-height: calc(100vh - 126px);
+  padding-bottom: 36px;
+}
+
+.page-view.is-active {
+  display: block;
+}
+
+.nav-links a.is-active {
+  color: var(--accent);
+}
+
+.hero {
+  padding-top: 0;
+}
+
+.hero-media {
+  min-height: calc(100vh - 44px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.hero-overlay-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  margin: 0 0 clamp(12px, 3vw, 22px) clamp(10px, 3vw, 28px);
+  padding: clamp(16px, 2vw, 24px);
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(6, 6, 6, 0.68), rgba(6, 6, 6, 0.42)),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.18), rgba(255, 255, 255, 0.04));
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(10px);
+}
+
+.hero-kicker {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-title {
+  margin: 0;
+  max-width: 14ch;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw + 10px, 30px);
+  line-height: 1.18;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.hero-nowrap {
+  white-space: nowrap;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.home-booking {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 26px 20px 0;
+}
+
+.booking-cta-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 26px;
+  text-align: left;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012)),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.24), rgba(0, 0, 0, 0.16));
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.34);
+}
+
+.booking-cta-copy {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding-right: 12px;
+}
+
+.booking-cta-kicker {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.booking-cta-copy h2 {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 29px);
+  line-height: 1.16;
+  letter-spacing: 0.5px;
+}
+
+.booking-cta-lead,
+.booking-cta-direct {
+  margin: 0;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.booking-cta-direct a {
+  color: var(--text);
+}
+
+.booking-nowrap {
+  white-space: nowrap;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.booking-field {
+  display: grid;
+  gap: 7px;
+}
+
+.booking-field span {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.booking-field input,
+.booking-field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(7, 7, 7, 0.54);
+  color: var(--text);
+  font: inherit;
+  padding: 14px 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.booking-field input::placeholder,
+.booking-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.booking-field input:focus,
+.booking-field textarea:focus {
+  border-color: rgba(var(--accent-soft-rgb), 0.9);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.16);
+  background: rgba(7, 7, 7, 0.72);
+}
+
+.booking-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.booking-field textarea {
+  min-height: 152px;
+  resize: vertical;
+}
+
+.booking-field-full {
+  grid-column: 1 / -1;
+}
+
+.booking-submit {
+  min-width: 0;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+[data-view="biography"] #biography,
+[data-view="videos"] #latest-release,
+[data-view="music"] #music,
+[data-view="press"] #press,
+[data-view="shows"] #shows,
+[data-view="contact"] #contact {
+  padding-top: 78px;
+}
+
+@media (max-width: 1100px) {
+  .site-main {
+    padding-top: 44px;
+  }
+
+  .logo {
+    width: 90px;
+    transform: scale(1.08);
+  }
+
+  [data-view="biography"] #biography,
+  [data-view="videos"] #latest-release,
+  [data-view="music"] #music,
+  [data-view="press"] #press,
+  [data-view="shows"] #shows,
+  [data-view="contact"] #contact {
+    padding-top: 68px;
+  }
+
+  .hero-media {
+    min-height: calc(100vh - 44px);
+    align-items: flex-end;
+  }
+
+  .hero-overlay-copy {
+    margin: 0 16px 24px;
+    padding: 18px;
+  }
+
+  .hero-title {
+    max-width: none;
+    font-size: clamp(14px, 3.2vw + 4px, 20px);
+  }
+
+  .home-booking {
+    padding: 22px 16px 0;
+  }
+
+  .booking-cta-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .booking-cta-copy {
+    padding-right: 0;
+  }
+
+  .booking-cta-copy h2 {
+    transform: scale(0.9);
+    transform-origin: left center;
+    line-height: 1.22;
+  }
+
+  .booking-nowrap {
+    white-space: normal;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-field-full {
+    grid-column: auto;
+  }
+
+  .page-contact-footer {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 1180px) {
+  #showsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    column-gap: 28px;
+  }
+
+  .shows-section {
+    min-width: 0;
+  }
+
+  .shows-grid {
+    max-width: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .shows-section-title {
+    font-size: 14px;
+  }
+
+  .show-card {
+    margin-top: 6px;
+    padding: 9px 12px;
+    border-radius: 10px;
+  }
+
+  .show-venue {
+    font-size: 13px;
+  }
+
+  .show-date {
+    font-size: 9px;
+    letter-spacing: 0.35px;
+  }
+
+  .show-city {
+    font-size: 12px;
+  }
+
+  .booking-note {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .shows-grid {
+    margin-top: 10px;
+  }
+
+  #showsList {
+    gap: 16px;
+  }
+
+  .shows-section-title {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .show-card {
+    padding: 8px 10px;
+    border-radius: 9px;
+  }
+
+  .show-meta {
+    gap: 1px;
+  }
+
+  .show-venue {
+    font-size: 12px;
+    line-height: 1.15;
+  }
+
+  .show-details {
+    gap: 5px;
+  }
+
+  .show-date {
+    font-size: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .show-city {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+}
+
+.hero-kicker,
+.booking-note,
+.show-date,
+.show-city,
+.press-meta,
+.press-date,
+.footer-contact-copy,
+footer,
+footer .contact-link,
+.contact-link {
+  color: #fff !important;
+  opacity: 1;
+}

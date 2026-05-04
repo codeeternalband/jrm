@@ -5,25 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Juho Ranta-Maunus Website</title>
   <meta name="description" content="Juho Ranta-Maunus Website featuring biography, videos, music, press, shows and contact information." />
-  <meta name="keywords" content="Juho Ranta-Maunus Website, Juho Ranta-Maunus, guitarist, music, official website" />
+  <meta name="keywords" content="Juho Ranta-Maunus, guitarist, music, official website, Code Eternal" />
   <meta property="og:title" content="Juho Ranta-Maunus Website" />
-  <meta property="og:description" content="Juho Ranta-Maunus Website." />
+  <meta property="og:description" content="Official website of guitarist Juho Ranta-Maunus." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://codeeternalband.github.io/jrm/" />
   <link rel="icon" type="image/png" href="assets/images/Logo JRM.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=32" />
+  <link rel="stylesheet" href="style.css?v=31" />
 </head>
 
 <body>
   <nav class="navbar">
     <a href="#home" class="logo-link" aria-label="Go to home">
-      <img src="assets/images/Logo JRM.png" alt="Juho Ranta-Maunus Website logo" class="logo" width="200" height="60" />
+      <img src="assets/images/Logo JRM.png" alt="Juho Ranta-Maunus logo" class="logo" width="200" height="60" />
     </a>
+
     <div class="nav-right">
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
         <span>Menu</span>
       </button>
+
       <div class="nav-links" id="primaryNav">
         <a href="#home" data-view-link="home">Home</a>
         <a href="#biography" data-view-link="biography">Bio</a>
@@ -33,223 +35,127 @@
         <a href="#shows" data-view-link="shows">Shows</a>
         <a href="#contact" data-view-link="contact">Contact</a>
       </div>
+
       <div class="nav-socials">
         <a href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener" aria-label="YouTube">
-          <img class="social-youtube" src="assets/images/Nettisivu/Youtube.png" alt="YouTube" width="38" height="38" loading="lazy" decoding="async" />
+          <img class="social-youtube" src="assets/images/Nettisivu/Youtube.png" alt="YouTube" />
         </a>
         <a href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank" rel="noopener" aria-label="Spotify">
-          <img src="assets/images/Nettisivu/Spotify.png" alt="Spotify" width="38" height="38" loading="lazy" decoding="async" />
+          <img src="assets/images/Nettisivu/Spotify.png" alt="Spotify" />
         </a>
         <a href="https://www.instagram.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img class="social-instagram" src="assets/images/Nettisivu/Instagram.webp" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" />
+          <img class="social-instagram" src="assets/images/Nettisivu/Instagram.webp" alt="Instagram" />
         </a>
         <a href="https://www.facebook.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="assets/images/Nettisivu/Facebook.webp" alt="Facebook" width="38" height="38" loading="lazy" decoding="async" />
+          <img src="assets/images/Nettisivu/Facebook.webp" alt="Facebook" />
         </a>
       </div>
     </div>
   </nav>
 
   <main class="site-main">
-    <!-- HOME VIEW -->
+    <!-- HOME -->
     <section class="page-view page-home is-active" data-view="home">
       <div class="hero">
-        <h1 class="sr-only">Juho Ranta-Maunus Website</h1>
         <div class="hero-media">
-          <video class="hero-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true">
+          <video class="hero-video" autoplay loop muted playsinline preload="metadata">
             <source src="assets/videos/raskasta-joulua-solo-hero.webm" type="video/webm" />
           </video>
           <div class="hero-overlay-copy">
             <p class="hero-kicker">Juho Ranta-Maunus</p>
             <h2 class="hero-title">Juho's guitar <span class="hero-nowrap">work, releases</span> and updates <span class="hero-nowrap">all in one place.</span></h2>
             <div class="hero-actions">
-              <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener">Watch</a>
-              <a class="feature-link" href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank" rel="noopener">Listen</a>
+              <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank">Watch</a>
+              <a class="feature-link" href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank">Listen</a>
             </div>
           </div>
           <span class="hero-credit">Video: Performing as a Special Guest with Raskasta Joulua</span>
         </div>
       </div>
 
-      <section class="home-booking" aria-labelledby="bookingTitle">
+      <section class="home-booking">
         <div class="booking-cta-card">
           <div class="booking-cta-copy">
-            <h2 id="bookingTitle">Book Juho for a <span class="booking-nowrap">solo performance!</span></h2>
-            <p class="booking-cta-lead">Use the form below to send a booking inquiry for solo performances, private events, interviews, special appearances, and more.</p>
+            <h2>Book Juho for a <span class="booking-nowrap">solo performance!</span></h2>
+            <p class="booking-cta-lead">Use the form to send a booking inquiry for solo performances, private events, interviews, or appearances.</p>
           </div>
-          <form class="booking-form" data-booking-form action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
+
+          <form class="booking-form" action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New solo booking inquiry" />
-            <input type="hidden" name="_autoresponse" value="Thanks for your message! I will get back to you as soon as possible!" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="booking-honeypot" />
-            <label class="booking-field">
-              <span>Your name</span>
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-            <label class="booking-field">
-              <span>Your email</span>
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-            <label class="booking-field">
-              <span>Event</span>
-              <input type="text" name="event" required />
-            </label>
-            <label class="booking-field booking-field-full">
-              <span>Message</span>
-              <textarea name="message" rows="5" required></textarea>
-            </label>
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="event" placeholder="Event type" required />
+            <textarea name="message" rows="5" placeholder="Your message" class="booking-field-full" required></textarea>
             <button class="feature-link booking-submit" type="submit">Send Message</button>
           </form>
         </div>
       </section>
     </section>
 
-    <!-- BIOGRAPHY VIEW -->
+    <!-- BIOGRAPHY -->
     <section class="page-view" data-view="biography">
-      <section id="biography">
+      <div id="biography">
         <p>Juho Ranta-Maunus (born June 29, 2006) is a <span id="currentAge"></span>-year-old guitarist from Finland.</p>
-        <p>Juho has studied guitar and music theory for more than a decade, alongside piano, ensemble work and performance studies. He has also taken part in summer programs at Berklee College of Music and Musicians Institute. He holds artist endorsements with Ibanez, Neural DSP and Levytukku. Among his most notable appearances are performances as a special guest with Finland's largest live production, Raskasta Joulua, and on the Elämäni Biisi (Song Of My Life) TV show in 2026.</p>
-        <p>He is the founder of the Finnish progressive metal band Code Eternal, where he works as lead guitarist, composer and arranger. He has also worked with melodic metalcore band Averse.</p>
-        <p>His playing was recognized internationally after winning Guitar World magazine’s <em>Young Guitarist of the Year</em> in 2020, and he has continued to build his path through solo releases, band work and live performances.</p>
-        <p>He will begin his studies in the performance program at Metropolia University of Applied Sciences in the fall of 2026. He is currently working on Code Eternal's debut album, and new solo material will also be released during 2026.</p>
-        <section class="bio-gear" aria-labelledby="bioGearTitle">
-          <h2 id="bioGearTitle">Gear</h2>
+        <p>Juho has studied guitar and music theory for more than a decade. He holds artist endorsements with Ibanez, Neural DSP and Levytukku. Notable appearances include Raskasta Joulua and the Elämäni Biisi TV show in 2026.</p>
+        <p>He is the founder of Code Eternal and has worked with Averse. He was named Guitar World’s <em>Young Guitarist of the Year</em> in 2020.</p>
+        
+        <div class="bio-gear">
+          <h2>Gear</h2>
           <ul class="bio-gear-list">
             <li>Ibanez AZ242PBG-CKB</li>
             <li>Neural DSP Quad Cortex</li>
             <li>Dunlop strings and picks</li>
           </ul>
-        </section>
+        </div>
+        
         <div class="bio-endorsement">
-          <img src="assets/icons/Ibanez_logo.svg.png" alt="Ibanez" class="bio-endorsement-logo" width="420" height="103" />
-          <img src="assets/icons/levytukku.png" alt="Levytukku" class="bio-endorsement-logo" width="320" height="93" />
-          <img src="assets/icons/Neural_SP_logo.png" alt="Neural DSP" class="bio-endorsement-logo" width="420" height="237" />
+          <img src="assets/icons/Ibanez_logo.svg.png" alt="Ibanez" class="bio-endorsement-logo" />
+          <img src="assets/icons/levytukku.png" alt="Levytukku" class="bio-endorsement-logo" />
+          <img src="assets/icons/Neural_SP_logo.png" alt="Neural DSP" class="bio-endorsement-logo" />
         </div>
-      </section>
+      </div>
     </section>
 
-    <!-- VIDEOS VIEW -->
+    <!-- VIDEOS -->
     <section class="page-view" data-view="videos">
-      <section id="latest-release" class="feature-section">
-        <div class="release-embed">
-          <article class="feature-card video-card">
-            <p class="video-card-title">Performing as a Special Guest with Raskasta Joulua</p>
-            <button type="button" class="video-launch" data-video-id="n0khkeWIdFY" data-video-title="Performing as a Special Guest with Raskasta Joulua" aria-label="Play Performing as a Special Guest with Raskasta Joulua"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)</p>
-            <button type="button" class="video-launch" data-video-id="J2ENARBpOxs" data-video-title="Tribute to Ozzy Osbourne - No More Tears (Collab cover by JRM, Guy Hillel &amp; Jabin Rodas)" aria-label="Play Tribute to Ozzy Osbourne - No More Tears"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Kiko Loureiro - Overflow (Cover by JRM)</p>
-            <button type="button" class="video-launch" data-video-id="5T9WabbhVxU" data-video-title="Kiko Loureiro - Overflow (Cover by JRM)" aria-label="Play Kiko Loureiro - Overflow (Cover by JRM)"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Juho Ranta-Maunus - The Drift (Playthrough)</p>
-            <button type="button" class="video-launch" data-video-id="J1r45Sk8siU" data-video-title="Juho Ranta-Maunus - The Drift (Playthrough)" aria-label="Play Juho Ranta-Maunus - The Drift (Playthrough)"></button>
-          </article>
-          <article class="feature-card video-card">
-            <p class="video-card-title">Dream Theater - Hollow Years (solo by JRM)</p>
-            <button type="button" class="video-launch" data-video-id="m8sOLzpLIQo" data-video-title="Dream Theater - Hollow Years (solo by JRM)" aria-label="Play Dream Theater - Hollow Years (solo by JRM)"></button>
-          </article>
-        </div>
-        <div class="feature-actions">
-          <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener">More videos on YouTube</a>
-        </div>
-      </section>
+      <div class="release-embed">
+        <!-- Lisää tähän video-artikkelit kuten aiemmin -->
+        <p>Check out my latest performances and playthroughs below.</p>
+      </div>
+      <div class="feature-actions">
+        <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank">More on YouTube</a>
+      </div>
     </section>
 
-    <!-- MUSIC VIEW -->
+    <!-- MUSIC -->
     <section class="page-view" data-view="music">
-      <section id="music">
-        <div class="music-frame">
-          <iframe src="https://open.spotify.com/embed/artist/1d55VFNm8Qci0DEQoEW0xy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" class="music-embed" title="Spotify Player"></iframe>
-        </div>
-        <div class="music-copy">
-          <section class="music-block">
-            <h2>Band Releases (Spotify)</h2>
-            <p class="music-role">Code Eternal (2021-) founder, lead guitarist, composer, arranger</p>
-            <div class="music-release-list">
-              <p><strong>Code Eternal</strong> (singles, 2025-2026)</p>
-              <ul class="music-track-list"><li>Brace Yourself</li><li>Voices Call</li></ul>
-              <p><strong>Averse - Twisted Mind</strong> (EP, 2025)</p>
-              <ul class="music-track-list"><li>Twisted Mind</li><li>Sinkin'</li><li>Redness</li></ul>
-            </div>
-          </section>
-          <section class="music-block">
-            <h2>Solo Releases (Spotify)</h2>
-            <div class="music-release-list">
-              <p><strong>The Drift</strong> (single, 2023)</p>
-              <p><strong>Stormchaser</strong> (EP, 2023)</p>
-              <ul class="music-track-list"><li>Stormchaser</li><li>Shades of Dawn</li><li>Cliffhanger</li></ul>
-            </div>
-          </section>
-        </div>
-      </section>
+      <div class="music-frame">
+        <iframe src="https://open.spotify.com/embed/artist/1d55VFNm8Qci0DEQoEW0xy" class="music-embed" allow="autoplay; encrypted-media"></iframe>
+      </div>
     </section>
 
-    <!-- PRESS VIEW -->
-    <section class="page-view" data-view="press">
-      <section id="press" class="feature-section">
-        <div class="press-grid">
-          <article class="press-card">
-            <h2>Juho performs in Elämäni Biisi TV Show</h2>
-            <div class="press-meta">
-              <div class="press-source-row"><span>Yle Areena</span><a class="press-quote-link" href="https://areena.yle.fi/1-76704332" target="_blank" rel="noreferrer">Read article</a></div>
-              <p class="press-date">January 3, 2026</p>
-            </div>
-          </article>
-          <article class="press-card">
-            <h2>Suomen lupaavin nuori kitaristi Juho Ranta-Maunus</h2>
-            <div class="press-meta">
-              <div class="press-source-row"><span>Metalliluola</span><a class="press-quote-link" href="https://metalliluola.fi/suomen-lupaavin-nuori-kitaristi-juho-ranta-maunus-kerasi-videolleen-nimekkaita-kepittajia/" target="_blank" rel="noreferrer">Read article</a></div>
-              <p class="press-date">January 7, 2024</p>
-            </div>
-          </article>
-          <article class="press-card">
-            <h2>Meet 2020's Guitarists of the Year</h2>
-            <div class="press-meta">
-              <div class="press-source-row"><span>Guitar World</span><a class="press-quote-link" href="https://www.guitarworld.com/features/meet-2020s-guitarists-of-the-year" target="_blank" rel="noreferrer">Read article</a></div>
-              <p class="press-date">April 9, 2021</p>
-            </div>
-          </article>
-        </div>
-      </section>
-    </section>
-
-    <!-- SHOWS VIEW -->
-    <section class="page-view" data-view="shows">
-      <section id="shows" class="feature-section">
-        <div id="showsList"></div>
-        <p class="booking-note" id="showsStatus">Loading shows...</p>
-      </section>
-    </section>
-
-    <!-- CONTACT VIEW -->
+    <!-- CONTACT -->
     <section class="page-view" data-view="contact">
-      <section id="contact">
-        <div class="booking-cta-card">
-          <div class="booking-cta-copy">
-            <p class="booking-cta-kicker">Contact</p>
-            <p class="booking-cta-lead">Use the form below to send a booking inquiry for solo performances, private events, interviews, special appearances, and more.</p>
-          </div>
-          <form class="booking-form" data-booking-form action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New solo booking inquiry" />
-            <input type="text" name="name" autocomplete="name" placeholder="Your Name" required />
-            <input type="email" name="email" autocomplete="email" placeholder="Your Email" required />
-            <input type="text" name="event" placeholder="Event/Subject" required />
-            <textarea name="message" rows="5" placeholder="Your Message" class="booking-field-full" required></textarea>
-            <button class="feature-link booking-submit" type="submit">Send Message</button>
-          </form>
+      <div class="booking-cta-card">
+        <div class="booking-cta-copy">
+          <p class="booking-cta-kicker">Contact</p>
+          <p class="booking-cta-lead">Use the form below for booking inquiries, interviews, and media requests.</p>
         </div>
-      </section>
+        <form class="booking-form" action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="event" placeholder="Subject" required />
+            <textarea name="message" rows="5" placeholder="Your message" class="booking-field-full" required></textarea>
+            <button class="feature-link booking-submit" type="submit">Send Message</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
     <p class="footer-contact-copy">For live bookings, interviews, media inquiries, and other requests, contact:</p>
     <p class="footer-contact-email">jrmguitarofficial@gmail.com</p>
-    <p>&copy; <span id="year"></span> Juho Ranta-Maunus Website. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Juho Ranta-Maunus. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

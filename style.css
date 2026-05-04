@@ -981,3 +981,69 @@ iframe {
 @media (min-width: 1180px) {
   #showsList {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+/* === FIX: videos grid layout === */
+
+[data-view="videos"] #latest-release {
+  max-width: 1240px;
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.release-embed {
+  width: 100%;
+  max-width: 1180px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.video-card {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video-card-title {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.video-launch {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .release-embed {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  [data-view="videos"] #latest-release {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .release-embed {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .video-card-title {
+    min-height: auto;
+  }
+}

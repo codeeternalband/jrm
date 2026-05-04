@@ -89,59 +89,75 @@
         </div>
       </div>
 
-      <section class="home-featured-release" aria-label="Latest Code Eternal releases">
-        <div class="home-featured-copy">
-          <h2>New singles from Code Eternal</h2>
-        </div>
+      <section class="home-booking" aria-labelledby="bookingTitle">
+        <div class="booking-cta-card">
+          <div class="booking-cta-copy">
+            <h2 id="bookingTitle">Book Juho for a <span class="booking-nowrap">solo performance!</span></h2>
+            <p class="booking-cta-lead">Use the form below to send a booking inquiry for solo performances, private events, interviews, special appearances, and more.</p>
+            <p class="booking-cta-direct"> <a class="contact-link js-contact-email-link" href="#contact"></a></p>
+          </div>
 
-        <div class="home-featured-grid">
-          <article class="home-featured-card">
-            <div class="home-featured-head">
-              <span class="home-featured-type">Code Eternal</span>
-              <span class="home-featured-badge">Single</span>
-            </div>
-            <h3 class="home-featured-title">Brace Yourself</h3>
-            <iframe
-              src="https://open.spotify.com/embed/album/369ncrcH74wKIo9Fg65jRs"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              class="home-featured-embed"
-              title="Brace Yourself on Spotify">
-            </iframe>
-          </article>
+          <form
+            class="booking-form"
+            data-booking-form
+            action="https://formsubmit.co/jrmguitarofficial@gmail.com"
+            method="POST">
+            <input type="hidden" name="_subject" value="New solo booking inquiry" />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thanks for your message! I will get back to you as soon as possible!"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="booking-honeypot" />
 
-          <article class="home-featured-card">
-            <div class="home-featured-head">
-              <span class="home-featured-type">Code Eternal</span>
-              <span class="home-featured-badge">Single</span>
-            </div>
-            <h3 class="home-featured-title">Voices Call</h3>
-            <iframe
-              src="https://open.spotify.com/embed/track/4yekGk9mJr54UqTB0tIt63"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              class="home-featured-embed"
-              title="Voices Call on Spotify">
-            </iframe>
-          </article>
+            <label class="booking-field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+
+            <label class="booking-field">
+              <span>Your email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label class="booking-field">
+              <span>Event</span>
+              <input type="text" name="event" required />
+            </label>
+
+            <label class="booking-field booking-field-full">
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button class="feature-link booking-submit" type="submit">Send Message</button>
+          </form>
         </div>
       </section>
 
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
-      </section>
     </section>
 
     <section class="page-view" data-view="biography">
       <section id="biography">
-        <p>Juho Ranta-Maunus (born June 29, 2006) is a guitarist from Finland.</p>
+        <p>Juho Ranta-Maunus (born June 29, 2006) is a <span id="currentAge"></span>-year-old guitarist from Finland.</p>
         <p>Juho has studied guitar and music theory for more than a decade, alongside piano, ensemble work and performance studies. He has also taken part in summer programs at Berklee College of Music and Musicians Institute. He holds artist endorsements with Ibanez, Neural DSP and Levytukku. Among his most notable appearances are performances as a special guest with Finland's largest live production, Raskasta Joulua, and on the Elämäni Biisi (Song Of My Life) TV show in 2026.</p>
         <p>He is the founder of the Finnish progressive metal band Code Eternal, where he works as lead guitarist, composer and arranger. He has also worked with melodic metalcore band Averse.</p>
         <p>His playing was recognized internationally after winning Guitar World magazine’s <em>Young Guitarist of the Year</em> in 2020, and he has continued to build his path through solo releases, band work and live performances.</p>
-        <p>He will begin his studies in the performance program at Metropolia University of Applied Sciences in the fall of 2026. He is currently working on Code Eternal's debut album as well as new solo material.</p>
+        <p>He will begin his studies in the performance program at Metropolia University of Applied Sciences in the fall of 2026. He is currently working on Code Eternal's debut album, and new solo material will also be released during 2026.</p>
+        <section class="bio-gear" aria-labelledby="bioGearTitle">
+          <h2 id="bioGearTitle">Gear</h2>
+          <ul class="bio-gear-list">
+            <li>Ibanez AZ242PBG-CKB</li>
+            <li>Neural DSP Quad Cortex</li>
+            <li>Dunlop strings and picks</li>
+          </ul>
+        </section>
+        <div class="bio-endorsement">
+          <img src="assets/icons/Ibanez_logo.svg.png" alt="Ibanez" class="bio-endorsement-logo" width="420" height="103" loading="lazy" decoding="async" />
+          <img src="assets/icons/levytukku.png" alt="Levytukku" class="bio-endorsement-logo" width="320" height="93" loading="lazy" decoding="async" />
+          <img src="assets/icons/Neural_SP_logo.png" alt="Neural DSP" class="bio-endorsement-logo" width="420" height="237" loading="lazy" decoding="async" />
+        </div>
       </section>
 
       <section class="page-contact-footer">
@@ -224,16 +240,18 @@
           </article>
 
         </div>
-      </section>
 
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
+        <div class="feature-actions">
+          <a
+            class="feature-link"
+            href="https://www.youtube.com/@jrmgtr"
+            target="_blank"
+            rel="noopener">
+            More videos on YouTube
+          </a>
         </div>
       </section>
+
     </section>
 
     <section class="page-view" data-view="music">
@@ -252,12 +270,6 @@
             <h2>Band Releases (Spotify)</h2>
             <p class="music-role">Code Eternal (2021-) founder, lead guitarist, composer, arranger</p>
             <div class="music-release-list">
-              <p><strong>Code Eternal - Sixth Wave</strong> (EP, 2023)</p>
-              <ul class="music-track-list">
-                <li>The Wave</li>
-                <li>Regeneration</li>
-                <li>Race Through Time</li>
-              </ul>
               <p><strong>Code Eternal</strong> (singles, 2025-2026)</p>
               <ul class="music-track-list">
                 <li>Brace Yourself</li>
@@ -268,6 +280,12 @@
                 <li>Twisted Mind</li>
                 <li>Sinkin'</li>
                 <li>Redness</li>
+              </ul>
+              <p><strong>Code Eternal - Sixth Wave</strong> (EP, 2022)</p>
+              <ul class="music-track-list">
+                <li>The Wave</li>
+                <li>Regeneration</li>
+                <li>Race Through Time</li>
               </ul>
             </div>
           </section>
@@ -282,6 +300,7 @@
                 <li>Shades of Dawn</li>
                 <li>Cliffhanger</li>
               </ul>
+              <p><strong>Cliffhanger</strong> (single, 2022)</p>
               <p><strong>Warp Drive</strong> (single, 2021)</p>
               <p><strong>Diversity</strong> (single, 2020)</p>
             </div>
@@ -289,14 +308,6 @@
         </div>
       </section>
 
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
-      </section>
     </section>
 
     <section class="page-view" data-view="press">
@@ -406,7 +417,7 @@
             <div class="press-meta">
               <div class="press-source-row">
                 <span>Guitar World</span>
-                <a class="press-quote-link" href="https://www.guitarworld.com/features/meet-2020s-guitarists-of-the-year" target="_blank" rel="noreferrer">Read article</a>
+                <a class="press-quote-link" href="https://www.guitarworld.com/features/meet-2020s-guitarists-of-the-year" target="_blank" rel="noopener" rel="noreferrer">Read article</a>
               </div>
               <p class="press-date">April 9, 2021</p>
             </div>
@@ -469,14 +480,7 @@
         </div>
       </section>
 
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
-      </section>
+    
     </section>
 
     <section class="page-view" data-view="shows">
@@ -500,11 +504,49 @@
 
     <section class="page-view" data-view="contact">
       <section id="contact">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
+        <div class="booking-cta-card">
+          <div class="booking-cta-copy">
+            <p class="booking-cta-kicker">Contact</p>
+            <p class="booking-cta-lead">Use the form below to send a booking inquiry for solo performances, private events, interviews, special appearances, and more.</p>
+            <p class="booking-cta-direct"> <a class="contact-link js-contact-email-link" href="#contact"></a></p>
+          </div>
+
+          <form
+            class="booking-form"
+            data-booking-form
+            action="https://formsubmit.co/jrmguitarofficial@gmail.com"
+            method="POST">
+            <input type="hidden" name="_subject" value="New solo booking inquiry" />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thanks for your message! I will get back to you as soon as possible!"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="booking-honeypot" />
+
+            <label class="booking-field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+
+            <label class="booking-field">
+              <span>Your email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label class="booking-field">
+              <span>Event</span>
+              <input type="text" name="event" required />
+            </label>
+
+            <label class="booking-field booking-field-full">
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button class="feature-link booking-submit" type="submit">Send Message</button>
+          </form>
         </div>
       </section>
     </section>

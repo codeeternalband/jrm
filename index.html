@@ -3,627 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- TITLE (tämä näkyy Googlessa sinisenä otsikkona) -->
-  <title>Code Eternal – Official Website</title>
-
-  <!-- META DESCRIPTION (Googlen tekstikuvaus) -->
-  <meta
-    name="description"
-    content="Code Eternal is a Finnish progressive metal band. Official website featuring biography, lineup, music, shows and contact information."
-  />
-
-  <!-- KEYWORDS (ei kriittinen, mutta ok mukana) -->
-  <meta
-    name="keywords"
-    content="Code Eternal, Code Eternal band, progressive metal, metal band Finland, Code Eternal official website"
-  />
-
-  <!-- Open Graph (someen & Googleen) -->
-  <meta property="og:title" content="Code Eternal – Official Website" />
-  <meta
-    property="og:description"
-    content="Official website of the progressive metal band Code Eternal."
-  />
+  <title>Juho Ranta-Maunus Website</title>
+  <meta name="description" content="Juho Ranta-Maunus Website featuring biography, videos, music, press, shows and contact information." />
+  <meta name="keywords" content="Juho Ranta-Maunus, guitarist, music, official website, Code Eternal" />
+  <meta property="og:title" content="Juho Ranta-Maunus Website" />
+  <meta property="og:description" content="Official website of guitarist Juho Ranta-Maunus." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://codeeternalband.com/" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/icons/Fawicon.png" />
-
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css?v=28" />
+  <meta property="og:url" content="https://codeeternalband.github.io/jrm/" />
+  <link rel="icon" type="image/png" href="assets/images/Logo JRM.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=31" />
 </head>
 
 <body>
-
-  <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="#top" class="logo-link">
-      <img src="assets/images/logo-white.png" alt="Code Eternal Logo" class="logo" width="200" height="60" />
+    <a href="#home" class="logo-link" aria-label="Go to home">
+      <img src="assets/images/Logo JRM.png" alt="Juho Ranta-Maunus logo" class="logo" width="200" height="60" />
     </a>
 
     <div class="nav-right">
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Avaa valikko">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
         <span>Menu</span>
       </button>
 
       <div class="nav-links" id="primaryNav">
-        <a href="#biography">Biography</a>
-        <a href="#lineup">Lineup</a>
-        <a href="#latest-release">Videos</a>
-        <a href="#music">Music</a>
-        <a href="#lyrics">Lyrics</a>
-        <a href="#press">Press</a>
-        <a href="#shows">Shows</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-view-link="home">Home</a>
+        <a href="#biography" data-view-link="biography">Bio</a>
+        <a href="#videos" data-view-link="videos">Videos</a>
+        <a href="#music" data-view-link="music">Music</a>
+        <a href="#press" data-view-link="press">Press</a>
+        <a href="#shows" data-view-link="shows">Shows</a>
+        <a href="#contact" data-view-link="contact">Contact</a>
       </div>
 
       <div class="nav-socials">
-        <a href="https://www.facebook.com/Codeeternal/" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="assets/icons/icon-facebook.svg" alt="Facebook" width="38" height="38" loading="lazy" decoding="async" />
+        <a href="https://www.youtube.com/@jrmgtr" target="_blank" rel="noopener" aria-label="YouTube">
+          <img class="social-youtube" src="assets/images/Nettisivu/Youtube.png" alt="YouTube" />
         </a>
-        <a href="https://www.instagram.com/code_eternal/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="assets/icons/icon-instagram.svg" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" />
+        <a href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank" rel="noopener" aria-label="Spotify">
+          <img src="assets/images/Nettisivu/Spotify.png" alt="Spotify" />
         </a>
-        <a href="https://www.youtube.com/channel/UC-vPF50rdRidDn1fiP3GvuA" target="_blank" rel="noopener" aria-label="YouTube">
-          <img src="assets/icons/icon-youtube.svg" alt="YouTube" width="38" height="38" loading="lazy" decoding="async" />
+        <a href="https://www.instagram.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img class="social-instagram" src="assets/images/Nettisivu/Instagram.webp" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/jrmguitar/" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="assets/images/Nettisivu/Facebook.webp" alt="Facebook" />
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero" id="top">
-    <h1 class="sr-only">Code Eternal</h1>
-    <div class="hero-media">
-      <div class="hero-lyric" aria-hidden="true"></div>
-      <span class="hero-credit">Photo: Toni Huhta</span>
-    </div>
-  </div>
-
-  <!-- BIOGRAPHY -->
-  <section id="biography">
-    <h2>Biography</h2>
-
-    <p>Progressive metal group Code Eternal made waves with the release of their single <em>“Brace Yourself”</em> on October 10, 2025. It marks the first single from their long-awaited debut album.</p>
-
-    <p>Code Eternal is fronted by guitarist Juho "JRM" Ranta-Maunus, who at just 14 years old won Guitar World Magazine’s <em>“Young Guitarist of the Year”</em> in 2020. Founded in 2021, Code Eternal quickly turned heads with their 2022 debut EP <em>Sixth Wave</em>. Now, three years later they return stronger, sharper and more ambitious than ever.</p>
-
-    <p><em>“Brace Yourself”</em> dives into thought-provoking territory, drawing inspiration from the concept of artificial intelligence evolving into a self-defending entity that could challenge humanity’s existence. Code Eternal's music is a dynamic blend of progressive metal, heavy riffs, and funk-infused grooves, elevated by pulsating synth layers that add depth and urgency to the band’s sound.</p>
-  </section>
-
-  <!-- LINEUP -->
-  <section id="lineup">
-    <h2>Lineup</h2>
-
-    <div class="lineup-grid">
-      <figure class="member-card">
-        <div class="member-photo-wrap">
-          <img src="assets/images/Kuva-Teemu.jpg" alt="Teemu Dahlman" loading="lazy" decoding="async" width="600" height="700" />
-          <span class="member-credit">Photo: Toni Huhta</span>
-        </div>
-        <figcaption>
-          <span class="member-name">Teemu Dahlman</span>
-        </figcaption>
-      </figure>
-
-      <figure class="member-card">
-        <div class="member-photo-wrap">
-          <img src="assets/images/Kuva-Juho.jpg" alt='Juho "JRM" Ranta-Maunus' loading="lazy" decoding="async" width="600" height="700" />
-          <span class="member-credit">Photo: Toni Huhta</span>
-        </div>
-        <figcaption>
-          <span class="member-name">Juho <span class="nowrap">Ranta-Maunus</span></span>
-        </figcaption>
-      </figure>
-
-      <figure class="member-card">
-        <div class="member-photo-wrap">
-          <img src="assets/images/Kuva-Matias.jpg" alt="Matias Källi" loading="lazy" decoding="async" width="600" height="700" />
-          <span class="member-credit">Photo: Toni Huhta</span>
-        </div>
-        <figcaption>
-          <span class="member-name">Matias Källi</span>
-        </figcaption>
-      </figure>
-
-      <figure class="member-card">
-        <div class="member-photo-wrap">
-          <img src="assets/images/Kuva-Marlon.jpg" alt="Marlon Mäkelä" loading="lazy" decoding="async" width="600" height="700" />
-          <span class="member-credit">Photo: Toni Huhta</span>
-        </div>
-        <figcaption>
-          <span class="member-name">Marlon Mäkelä</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- LATEST RELEASE -->
-  <section id="latest-release" class="feature-section">
-    <h2>Videos</h2>
-    <div class="release-embed">
-      <article class="feature-card video-card">
-        <iframe
-          src="https://www.youtube.com/embed/zaQy98UgrTU"
-          title="Code Eternal - Brace Yourself"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </article>
-
-      <article class="feature-card video-card">
-        <iframe
-          src="https://www.youtube.com/embed/s5jS_5bygdA"
-          title="Code Eternal - Music Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </article>
-    </div>
-  </section>
-
-  <!-- MUSIC -->
-  <section id="music">
-    <h2>Music</h2>
-    <div class="music-frame">
-      <iframe
-        src="https://open.spotify.com/embed/artist/5vuhEK6GfC6Zz0VJntD7qE"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        class="music-embed"
-        title="Spotify Player">
-      </iframe>
-    </div>
-  </section>
-
-  <section id="lyrics" class="feature-section">
-    <h2>Lyrics</h2>
-    <details class="lyrics-card lyrics-panel">
-      <summary class="lyrics-summary">
-        <span class="lyrics-summary-copy">
-          <span class="lyrics-title">Voices Call</span>
-        </span>
-        <span class="lyrics-toggle" aria-hidden="true">⌄</span>
-      </summary>
-
-      <div class="lyrics-body">
-        <p>
-          Voices call<br>
-          Yet no one's there<br>
-          Whispers in silence<br>
-          I can't escape<br>
-          This prison cell<br>
-          Trapped in alliance
-        </p>
-
-        <p>
-          They take me down and take control<br>
-          Through voices deep within my soul<br>
-          Is it me or them talking in my head<br>
-          Lacking sense of reality
-        </p>
-
-        <p>
-          I hear them calling out my name<br>
-          I wanna run away but I'm standing still<br>
-          Every corner of my mind is drowning in pain<br>
-          Sleep turns my mind off until it reigns again
-        </p>
-
-        <p>
-          Web of lies surrounding me<br>
-          Lack of perception<br>
-          Conspiracies, they haunt my mind<br>
-          I fade into shadows
-        </p>
-
-        <p>
-          They take me down and take control<br>
-          Through voices deep within my soul<br>
-          Is it me or them talking in my head<br>
-          Lacking sense of reality
-        </p>
-
-        <p>
-          They take me down and take control<br>
-          Web of lies surrounding me
-        </p>
-
-        <p>
-          I hear them calling out my name<br>
-          I wanna run away but I'm standing still<br>
-          Every corner of my mind is drowning in pain<br>
-          Sleep turns my mind off until it reigns again
-        </p>
-
-        <p class="lyrics-credit">Lyrics by Teemu Dahlman and Juho Ranta-Maunus</p>
-      </div>
-    </details>
-
-    <details class="lyrics-card lyrics-panel">
-      <summary class="lyrics-summary">
-        <span class="lyrics-summary-copy">
-          <span class="lyrics-title">Brace Yourself</span>
-        </span>
-        <span class="lyrics-toggle" aria-hidden="true">⌄</span>
-      </summary>
-
-      <div class="lyrics-body">
-        <p>
-          You walk on a shattered ice<br>
-          Every step you take is another roll of dice<br>
-          Bad decisions and self-exclusions<br>
-          Where is the natural wisdom
-        </p>
-
-        <p>
-          We are on a sinking boat<br>
-          At the sea that's made of ones and zeros<br>
-          Is there even a way out anymore, anymore
-        </p>
-
-        <p>
-          Humanity, brace yourself<br>
-          There is a storm that’s drawing near<br>
-          For the AI extends too far
-        </p>
-
-        <p>
-          I lay my hands on the ground and<br>
-          Feel the rocks and grit compounded<br>
-          We still believe that the earth is rounded<br>
-          The web is full of lies and lies and...
-        </p>
-
-        <p>
-          We are on a sinking boat<br>
-          At the sea that's made of ones and zeros<br>
-          Is there even a way out anymore, anymore
-        </p>
-
-        <p>
-          Humanity, brace yourself<br>
-          There is a storm that’s drawing near<br>
-          For the AI extends too far
-        </p>
-
-        <p>
-          Humanity, brace yourself<br>
-          There is a storm that’s drawing near<br>
-          For the AI extends too far
-        </p>
-
-        <p>
-          Your days are counted<br>
-          Time is running out of your hands<br>
-          There is a storm that’s drawing near<br>
-          For the AI extends too far<br>
-          For the AI extends too far
-        </p>
-
-        <p class="lyrics-credit">Lyrics by Teemu Dahlman and Juho Ranta-Maunus</p>
-      </div>
-    </details>
-  </section>
-
-  <section id="press" class="feature-section">
-    <h2>Press</h2>
-    <div class="press-grid">
-      <div class="press-card">
-        <p class="press-quote">
-          „Brace Yourself“ behandelt folgendes Thema: den Aufstieg der künstlichen
-          Intelligenz als sich selbst verteidigende Einheit, die die Menschheit zwingt, sich
-          mit den Folgen ihrer eigenen Schöpfung auseinanderzusetzen.&nbsp;<a
-            href="https://vampster.com/news/code-eternal-neue-progressive-metal-single-brace-yourself-mitsamt-video-clip/"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Vampster article in a new tab"></a>
-        </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Vampster, DEU</span>
+  <main class="site-main">
+    <!-- HOME -->
+    <section class="page-view page-home is-active" data-view="home">
+      <div class="hero">
+        <div class="hero-media">
+          <video class="hero-video" autoplay loop muted playsinline preload="metadata">
+            <source src="assets/videos/raskasta-joulua-solo-hero.webm" type="video/webm" />
+          </video>
+          <div class="hero-overlay-copy">
+            <p class="hero-kicker">Juho Ranta-Maunus</p>
+            <h2 class="hero-title">Juho's guitar <span class="hero-nowrap">work, releases</span> and updates <span class="hero-nowrap">all in one place.</span></h2>
+            <div class="hero-actions">
+              <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank">Watch</a>
+              <a class="feature-link" href="https://open.spotify.com/artist/1d55VFNm8Qci0DEQoEW0xy" target="_blank">Listen</a>
+            </div>
           </div>
-          <p class="press-date">November 7, 2025</p>
+          <span class="hero-credit">Video: Performing as a Special Guest with Raskasta Joulua</span>
         </div>
       </div>
 
-      <div class="press-card">
-        <p class="press-quote">
-          "Brace Yourself" - Kappale jatkaa bändin kunnianhimoista ja virtuoottista linjaa, jossa yhdistyvät tekninen taituruus, voimakkaat melodiat ja dramaattiset sävyt&nbsp;<a
-            href="https://metalliluola.fi/progressiivinen-metallilupaus-code-eternal-julkaisi-ensimmaisen-singlen-brace-yourself-tulevalta-albumilta/"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Metalliluola article in a new tab"></a>
-        </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Metalliluola, FIN</span>
+      <section class="home-booking">
+        <div class="booking-cta-card">
+          <div class="booking-cta-copy">
+            <h2>Book Juho for a <span class="booking-nowrap">solo performance!</span></h2>
+            <p class="booking-cta-lead">Use the form to send a booking inquiry for solo performances, private events, interviews, or appearances.</p>
           </div>
-          <p class="press-date">October 19, 2025</p>
+
+          <form class="booking-form" action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New solo booking inquiry" />
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="event" placeholder="Event type" required />
+            <textarea name="message" rows="5" placeholder="Your message" class="booking-field-full" required></textarea>
+            <button class="feature-link booking-submit" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <!-- BIOGRAPHY -->
+    <section class="page-view" data-view="biography">
+      <div id="biography">
+        <p>Juho Ranta-Maunus (born June 29, 2006) is a <span id="currentAge"></span>-year-old guitarist from Finland.</p>
+        <p>Juho has studied guitar and music theory for more than a decade. He holds artist endorsements with Ibanez, Neural DSP and Levytukku. Notable appearances include Raskasta Joulua and the Elämäni Biisi TV show in 2026.</p>
+        <p>He is the founder of Code Eternal and has worked with Averse. He was named Guitar World’s <em>Young Guitarist of the Year</em> in 2020.</p>
+        
+        <div class="bio-gear">
+          <h2>Gear</h2>
+          <ul class="bio-gear-list">
+            <li>Ibanez AZ242PBG-CKB</li>
+            <li>Neural DSP Quad Cortex</li>
+            <li>Dunlop strings and picks</li>
+          </ul>
+        </div>
+        
+        <div class="bio-endorsement">
+          <img src="assets/icons/Ibanez_logo.svg.png" alt="Ibanez" class="bio-endorsement-logo" />
+          <img src="assets/icons/levytukku.png" alt="Levytukku" class="bio-endorsement-logo" />
+          <img src="assets/icons/Neural_SP_logo.png" alt="Neural DSP" class="bio-endorsement-logo" />
         </div>
       </div>
+    </section>
 
-      <div class="press-card">
-        <p class="press-quote">
-          "Brace Yourself" - Kappale yhdistää virtuoottista soittoa, vahvoja melodioita ja dramaattisia sävyjä - vaikutteita voi kuulla muun muassa Dream Theaterin ja Symphony X:n suunnalta&nbsp;<a
-            href="https://kaaoszine.fi/progressiivinen-metallilupaus-code-eternal-julkaisi-ensimmaisen-singlen-brace-yourself-tulevalta-albumilta/"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Kaaoszine article in a new tab"></a>
-        </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Kaaoszine, FIN</span>
-          </div>
-          <p class="press-date">October 13, 2025</p>
-        </div>
+    <!-- VIDEOS -->
+    <section class="page-view" data-view="videos">
+      <div class="release-embed">
+        <!-- Lisää tähän video-artikkelit kuten aiemmin -->
+        <p>Check out my latest performances and playthroughs below.</p>
       </div>
-
-      <div class="press-card">
-        <p class="press-quote">
-          Drawing influence from Dream Theater, Symphony X, and Jelusick, Code Eternal’s sound merges jaw-dropping technicality with the passion and swagger of modern metal.&nbsp;<a
-            href="https://metaldevastationradio.com/thebeast/blog/28156/code-eternal-unleash-new-single-brace-yourself-out-october-10-2025"
-            target="_blank"
-            rel="noopener"
-            class="press-quote-link"
-            aria-label="Open Metal Devastation Radio article in a new tab"></a>
-        </p>
-        <div class="press-meta">
-          <div class="press-source-row">
-            <span>Metal Devastation Radio, USA</span>
-          </div>
-          <p class="press-date">October 10, 2025</p>
-        </div>
+      <div class="feature-actions">
+        <a class="feature-link" href="https://www.youtube.com/@jrmgtr" target="_blank">More on YouTube</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SHOWS -->
-  <section id="shows" class="feature-section">
-    <h2>Shows</h2>
+    <!-- MUSIC -->
+    <section class="page-view" data-view="music">
+      <div class="music-frame">
+        <iframe src="https://open.spotify.com/embed/artist/1d55VFNm8Qci0DEQoEW0xy" class="music-embed" allow="autoplay; encrypted-media"></iframe>
+      </div>
+    </section>
 
-    <div class="shows-grid">
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Bar 15 Basement</span>
-          </div>
-          <p class="show-date">March 14, 2026</p>
-          <p class="show-city">Seinäjoki, FIN</p>
+    <!-- CONTACT -->
+    <section class="page-view" data-view="contact">
+      <div class="booking-cta-card">
+        <div class="booking-cta-copy">
+          <p class="booking-cta-kicker">Contact</p>
+          <p class="booking-cta-lead">Use the form below for booking inquiries, interviews, and media requests.</p>
         </div>
-      </article>
+        <form class="booking-form" action="https://formsubmit.co/jrmguitarofficial@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="event" placeholder="Subject" required />
+            <textarea name="message" rows="5" placeholder="Your message" class="booking-field-full" required></textarea>
+            <button class="feature-link booking-submit" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Hugo Hall</span>
-          </div>
-          <p class="show-date">February 18, 2026</p>
-          <p class="show-city">Seinäjoki, FIN</p>
-        </div>
-      </article>
+  <footer>
+    <p class="footer-contact-copy">For live bookings, interviews, media inquiries, and other requests, contact:</p>
+    <p class="footer-contact-email">jrmguitarofficial@gmail.com</p>
+    <p>&copy; <span id="year"></span> Juho Ranta-Maunus. All rights reserved.</p>
+  </footer>
 
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Lentilärock</span>
-          </div>
-          <p class="show-date">August 2, 2025</p>
-          <p class="show-city">Kuortane, FIN</p>
-        </div>
-      </article>
-
-      <article class="show-card">
-        <div class="show-meta">
-          <div class="show-venue-row">
-            <span class="show-venue">Rytmikorjaamo</span>
-          </div>
-          <p class="show-date">October 30, 2021</p>
-          <p class="show-city">Seinäjoki, FIN</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-panel">
-      <p>
-        For live bookings, interviews, media inquiries, and other band-related requests, contact:
-      </p>
-      <p class="contact-email-row">
-        <span class="contact-link" id="ce-mail"></span>
-      </p>
-    </div>
-  </section>
-
-<footer>
-  <p>&copy; <span id="year"></span> Code Eternal. All rights reserved.</p>
-</footer>
-
-  <!-- MENU SCRIPT -->
-  <script>
-    // Estetaan mobiiliselaimia palauttamasta satunnaista scroll-positiota tavallisella sivulatauksella.
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-
-    const navigationEntry = performance.getEntriesByType('navigation')[0];
-    const navigationType = navigationEntry ? navigationEntry.type : '';
-
-    if (!window.location.hash && navigationType !== 'back_forward') {
-      const resetScroll = () => window.scrollTo(0, 0);
-      resetScroll();
-      window.addEventListener('load', () => {
-        requestAnimationFrame(resetScroll);
-      }, { once: true });
-    }
-
-    // Automaattinen vuosiluku
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Sähköpostiosoite muodostetaan selaimessa ilman selväkielistä osoitetta HTML:ssä tai JS-stringinä
-    const ceMail = document.getElementById('ce-mail');
-    if (ceMail) {
-      const makeText = (codes) => codes.map((code) => String.fromCharCode(code)).join('');
-      const user = makeText([99, 111, 100, 101, 101, 116, 101, 114, 110, 97, 108, 98, 97, 110, 100]);
-      const domain = makeText([103, 109, 97, 105, 108, 46, 99, 111, 109]);
-
-      ceMail.textContent = `${user}@${domain}`;
-    }
-
-    // Vaihtuva lyric-nosto hero-kuvan paalla.
-    const heroLyric = document.querySelector('.hero-lyric');
-
-    if (heroLyric) {
-      const heroSongOrder = ['Brace Yourself', 'Voices Call'];
-      const heroLyricPairs = heroSongOrder.flatMap((songTitle) => {
-        const titleEl = Array.from(document.querySelectorAll('.lyrics-title')).find((el) => el.textContent.trim() === songTitle);
-        const panel = titleEl ? titleEl.closest('.lyrics-panel') : null;
-
-        if (!panel) {
-          return [];
-        }
-
-        return Array.from(panel.querySelectorAll('.lyrics-body p:not(.lyrics-credit)')).flatMap((paragraph) => {
-          const lines = paragraph.innerHTML
-            .split('<br>')
-            .map((line) => line.replace(/<[^>]+>/g, '').trim())
-            .filter(Boolean);
-
-          const pairs = [];
-
-          for (let i = 0; i < lines.length; i += 2) {
-            pairs.push({ songTitle, lineOne: lines[i], lineTwo: lines[i + 1] || '' });
-          }
-
-          return pairs;
-        });
-      });
-
-      let heroLyricIndex = Math.floor(Math.random() * heroLyricPairs.length);
-      const heroLyricDisplayMs = 5000;
-
-      heroLyric.innerHTML = '<div class="hero-lyric-stage"></div><small class="hero-lyric-song"><span class="hero-lyric-song-label"></span></small>';
-
-      const heroLyricStage = heroLyric.querySelector('.hero-lyric-stage');
-      const heroLyricSong = heroLyric.querySelector('.hero-lyric-song-label');
-
-      const heroLyricLayers = heroLyricStage
-        ? heroLyricPairs.map(({ lineOne, lineTwo }) => {
-            const layer = document.createElement('div');
-            const firstLine = document.createElement('span');
-            const secondLine = document.createElement('span');
-
-            layer.className = 'hero-lyric-lines';
-            firstLine.className = 'hero-lyric-line';
-            secondLine.className = 'hero-lyric-line';
-            firstLine.textContent = lineTwo ? lineOne : '';
-            secondLine.textContent = lineTwo || lineOne;
-
-            layer.append(firstLine, secondLine);
-            heroLyricStage.append(layer);
-            return layer;
-          })
-        : [];
-
-      const setHeroSongTitle = (index) => {
-        if (!heroLyricSong) {
-          return;
-        }
-
-        const nextSongTitle = heroLyricPairs[index]?.songTitle || '';
-        if (heroLyricSong.textContent !== nextSongTitle) {
-          heroLyricSong.textContent = nextSongTitle;
-        }
-      };
-
-      const showHeroLyric = (index) => {
-        heroLyricLayers.forEach((layer, layerIndex) => {
-          layer.classList.toggle('is-active', layerIndex === index);
-        });
-
-        setHeroSongTitle(index);
-        heroLyricIndex = index;
-      };
-
-      if (heroLyricLayers[heroLyricIndex]) {
-        showHeroLyric(heroLyricIndex);
-      }
-
-      if (heroLyricPairs.length > 1 && heroLyricLayers.length === heroLyricPairs.length) {
-        let heroLyricTimeoutId = 0;
-
-        const clearHeroLyricTimer = () => {
-          if (heroLyricTimeoutId) {
-            window.clearTimeout(heroLyricTimeoutId);
-            heroLyricTimeoutId = 0;
-          }
-        };
-
-        const scheduleHeroLyricAdvance = () => {
-          clearHeroLyricTimer();
-
-          if (document.hidden) {
-            return;
-          }
-
-          heroLyricTimeoutId = window.setTimeout(() => {
-            const nextHeroLyricIndex = (heroLyricIndex + 1) % heroLyricPairs.length;
-            showHeroLyric(nextHeroLyricIndex);
-            scheduleHeroLyricAdvance();
-          }, heroLyricDisplayMs);
-        };
-
-        document.addEventListener('visibilitychange', () => {
-          if (document.hidden) {
-            clearHeroLyricTimer();
-            return;
-          }
-
-          showHeroLyric(heroLyricIndex);
-          scheduleHeroLyricAdvance();
-        });
-
-        scheduleHeroLyricAdvance();
-      }
-    }
-
-    // Mobiilivalikko
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('primaryNav');
-
-    if (btn && nav) {
-      btn.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(isOpen));
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
-
-      nav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          if (nav.classList.contains('open')) {
-            nav.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-          }
-        });
-      });
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>

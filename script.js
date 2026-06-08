@@ -20,31 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 2. SIVUJEN VAIHTAMINEN (NAVIGOINTI)
   function switchView(viewName) {
-    // Piilotetaan kaikki sivut ja poistetaan aktiivisuus linkeistä
     pageViews.forEach(view => view.classList.remove("is-active"));
     navLinks.forEach(link => link.classList.remove("is-active"));
 
-    // Näytetään klikattu sivu
     const targetView = document.querySelector(`.page-view[data-view="${viewName}"]`);
     if (targetView) {
       targetView.classList.add("is-active");
     }
 
-    // Merkitään klikattu linkki aktiiviseksi
     const targetLink = document.querySelector(`.nav-links a[data-view-link="${viewName}"]`);
     if (targetLink) {
       targetLink.classList.add("is-active");
     }
 
-    // Suljetaan mobiilivalikko sivunvaihdon jälkeen
     if (primaryNav) primaryNav.classList.remove("open");
     if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
 
-    // Kelataan sivu ylös
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  // Kuunnellaan valikon linkkien klikkauksia
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       const viewName = link.getAttribute("data-view-link");
@@ -56,16 +50,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Tarkistetaan osoiterivin #hash sivun latautuessa (esim. jos joku menee suoraan osoitteeseen #biography)
   const currentHash = window.location.hash.replace("#", "");
   if (currentHash) {
     switchView(currentHash);
   }
 
-  // 3. IÄN AUTOMAATTINEN LASKENTA (Syntymäpäivä 29.6.2006)
+  // 3. YOUTUBE-VIDEOT: PIKKUKUVAT JA SOITTO
+  const videoLaunchButtons = document.querySelectorAll(".video-launch");
+  
+  videoLaunchButtons.forEach(button => {
+    const videoId = button.getAttribute("data-video-id");
+    
+    if (videoId) {
+      // Haetaan YouTuben virallinen pikkukuva automaattisesti taustakuvaksi
+      button.style.backgroundImage = `url('https://img.youtube.com/vi/${videoId}/hqdefault.jpg')`;
+      
+      // Tehdään klikkaustoiminto, joka lataa videon suoraan sivulle
+      button.addEventListener("click", function() {
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+        iframe.setAttribute("title", button.getAttribute("data-video-title") || "YouTube video");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        iframe.setAttribute("allowfullscreen", "true");
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "none";
+        iframe.style.borderRadius = "14px";
+        
+        // Korvataan musta nappi upotetulla videolla
+        this.parentNode.replaceChild(iframe, this);
+      });
+    }
+  });
+
+  // 4. IÄN AUTOMAATTINEN LASKENTA
   const currentAgeSpan = document.getElementById("currentAge");
   if (currentAgeSpan) {
-    const birthDate = new Date(2006, 5, 29); // Huom: kuukaudet alkavat nollasta (5 = kesäkuu)
+    const birthDate = new Date(2006, 5, 29);
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
@@ -75,13 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
     currentAgeSpan.textContent = age;
   }
 
-  // 4. FOOTERIN VUOSILUKU
+  // 5. FOOTERIN VUOSILUKU
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // 5. YHTEYSTIEDOT (Sähköpostien dynaaminen lisäys suojauksen vuoksi)
+  // 6. DYYNAAMISET YHTEYSTIEDOT
   const emailSpans = document.querySelectorAll(".js-contact-email");
   emailSpans.forEach(span => {
     span.textContent = "jrmguitarofficial@gmail.com";

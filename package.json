@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "dev": "browser-sync start --server --files \"*.html,*.css,*.js,*.txt,*.png,*.jpg,*.svg,content/**/*.txt\" --host 127.0.0.1 --port 8080 --no-open"
-  },
-  "devDependencies": {
-    "browser-sync": "^3.0.4"
-  }
-}

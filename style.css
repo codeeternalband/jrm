@@ -1627,3 +1627,11 @@ footer .contact-link,
   color: #fff !important;
   opacity: 1;
 }
+
+/* Varmistetaan että upotetut YouTube-videot pysyvät aina 16:9 kuvasuhteessa eivätkä rajaudu */
+.video-card iframe {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  display: block;
+}

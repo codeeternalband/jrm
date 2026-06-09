@@ -21,7 +21,7 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="style.css?v=101" />
+  <link rel="stylesheet" href="style.css?v=102" />
 </head>
 
 <body>
@@ -63,6 +63,7 @@
   </nav>
 
   <main class="site-main">
+    <!-- HOME PAGE -->
     <section class="page-view page-home is-active" data-view="home">
       <div class="hero">
         <h1 class="sr-only">Juho Ranta-Maunus Website</h1>
@@ -135,17 +136,9 @@
           </form>
         </div>
       </section>
-
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
-      </section>
     </section>
 
+    <!-- BIOGRAPHY PAGE -->
     <section class="page-view" data-view="biography">
       <section id="biography">
         <p>Juho Ranta-Maunus (born June 29, 2006) is a <span id="currentAge"></span>-year-old guitarist from Finland.</p>
@@ -161,26 +154,13 @@
             <li>Dunlop strings and picks</li>
           </ul>
         </section>
-        <div class="bio-endorsement">
-          <img src="assets/icons/Ibanez_logo.png" alt="Ibanez" class="bio-endorsement-logo" />
-          <img src="assets/icons/levytukku.png" alt="Levytukku" class="bio-endorsement-logo" />
-          <img src="assets/icons/Neural_DSP_logo.png" alt="Neural DSP" class="bio-endorsement-logo" />
-        </div>
-      </section>
-
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
       </section>
     </section>
 
+    <!-- VIDEOS PAGE -->
     <section class="page-view" data-view="videos">
       <section id="latest-release" class="feature-section">
-        <div class="release-embed">
+        <div class="release-embed" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start;">
           <article class="feature-card video-card">
             <p class="video-card-title">Performing as a Special Guest with Raskasta Joulua</p>
             <button
@@ -246,7 +226,6 @@
               aria-label="Play Dream Theater - Hollow Years (solo by JRM)">
             </button>
           </article>
-
         </div>
 
         <div class="feature-actions">
@@ -259,17 +238,9 @@
           </a>
         </div>
       </section>
-
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
-      </section>
     </section>
 
+    <!-- MUSIC PAGE -->
     <section class="page-view" data-view="music">
       <section id="music">
         <div class="music-frame">
@@ -323,17 +294,9 @@
           </section>
         </div>
       </section>
-
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
-      </section>
     </section>
 
+    <!-- PRESS PAGE -->
     <section class="page-view" data-view="press">
       <section id="press" class="feature-section">
         <div class="press-grid">
@@ -448,39 +411,6 @@
           </article>
 
           <article class="press-card">
-            <h2>Juho Ranta-Maunus Wins 2020 Young Guitarist of The Year Award</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>PRS Guitars</span>
-                <a class="press-quote-link" href="https://prsguitars.com/blog/post/juho_ranta_maunus_wins_2020_young_guitarist_of_the_year_award" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">December 23, 2020</p>
-            </div>
-          </article>
-
-          <article class="press-card">
-            <h2>Juho Ranta-Maunus wins Young Guitarist of the Year 2020</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Guitar World</span>
-                <a class="press-quote-link" href="https://www.guitarworld.com/news/juho-ranta-maunus-wins-young-guitarist-of-the-year-2020" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">December 22, 2020</p>
-            </div>
-          </article>
-
-          <article class="press-card">
-            <h2>14-vuotias suomalainen on maailman paras nuori kitaristi</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Yle Uutiset</span>
-                <a class="press-quote-link" href="https://yle.fi/a/3-11712421" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">December 22, 2020</p>
-            </div>
-          </article>
-
-          <article class="press-card">
             <h2>Juho Ranta-Maunus | Artists | Ibanez guitars</h2>
             <div class="press-meta">
               <div class="press-source-row">
@@ -490,30 +420,11 @@
               <p class="press-date">Artist page</p>
             </div>
           </article>
-
-          <article class="press-card">
-            <h2>Tu­let­ko soit­ta­maan ki­ta­ra­soo­lon Elämäni biisi -jak­sos­sa?</h2>
-            <div class="press-meta">
-              <div class="press-source-row">
-                <span>Ilkka-Pohjalainen</span>
-                <a class="press-quote-link" href="https://www.ilkkapohjalainen.fi/seinajokelainen-juho-herasi-puheluun-tuletko-soitt/12521905" target="_blank" rel="noreferrer">Read article</a>
-              </div>
-              <p class="press-date">Ilkka-Pohjalainen</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
         </div>
       </section>
     </section>
 
+    <!-- SHOWS PAGE -->
     <section class="page-view" data-view="shows">
       <section id="shows" class="feature-section">
         <div id="showsList"></div>
@@ -522,17 +433,9 @@
           <p class="booking-note">Enable JavaScript to load shows from the text file.</p>
         </noscript>
       </section>
-
-      <section class="page-contact-footer">
-        <div class="contact-panel">
-          <p>For live bookings, interviews, media inquiries, and other requests, contact:</p>
-          <p class="contact-email-row">
-            <span class="contact-link js-contact-email"></span>
-          </p>
-        </div>
-      </section>
     </section>
 
+    <!-- CONTACT PAGE -->
     <section class="page-view" data-view="contact">
       <section id="contact">
         <div class="booking-cta-card">
@@ -591,6 +494,6 @@
     <p>© <span id="year"></span> Juho Ranta-Maunus Website. All rights reserved.</p>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
